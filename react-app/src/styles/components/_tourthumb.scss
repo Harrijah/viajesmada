@@ -1,0 +1,123 @@
+.tourcontainer {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: fit-content;
+  margin: 1% 1%;
+  padding: 0;
+  background-color: $neutre;
+  // border: solid 2px $sabledore;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+  .thumnimg {
+    a {
+      text-decoration: none;
+      div {
+        display: flex;
+        align-items: center;
+        max-height: 175px;
+        overflow: hidden;
+        border-radius: 5px 5px 0 0;
+        .imgthumb {
+          max-height: 200px;
+          width: 100%;
+          border-radius: 5px 5px 0 0;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    h3 {
+      text-align: center;
+    }
+  }
+  .tourinfos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    align-items: top;
+    padding: 5px 10px;
+    .tourcolone {
+      width: 65%;
+      text-align: left !important;
+      p,
+      span {
+        background: $neutre;
+        text-align: left !important;
+      }
+      background: $neutre;
+      p {
+        font-weight: bold;
+        text-align: left  !important;
+      }
+      span {
+        font-weight: 400;
+        .difficultyclass {
+          width: 30px;
+          background-color: $neutre;
+        }
+      }
+    }
+    .tourcoltwo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35%;
+      padding: 5px;
+      border: solid 1px $sabledore;
+      border-radius: 5px;
+      text-align: center;
+      div {
+        p {
+          font-weight: 400;
+        }
+        span {
+          font-weight: 400;
+        }
+        .daynumber {
+          font-size: 1rem;
+          // font-weight: 600;
+          color: $sabledore;
+          margin-bottom: 0.5rem;
+        }
+        .tourprice {
+          font-size: 1rem;
+          // font-weight: 400;
+          color: $sabledore;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+  .tourbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0 0 5px 5px;
+    background-color: $bleuturquoise;
+    border: 1px solid $bleuturquoise;
+    color: $sabledore;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: $neutre;
+      color: $bleuturquoise;
+      border: 1px solid $bleuturquoise;
+    }
+  }
+}

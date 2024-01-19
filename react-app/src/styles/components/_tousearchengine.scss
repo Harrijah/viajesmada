@@ -1,0 +1,220 @@
+
+.firstbann {
+    position: relative;
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+
+    .filtercontainer {
+      position: relative;
+      display: block;
+
+      .filterbox {
+        position: relative;
+        display: block;
+        width: 90%;
+        // border: solid 3px $sablechaud;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        margin: -50px auto 50px;
+        // border-radius: 10% 90% 10% 90% / 10% 90% 10% 90%;
+        padding: 10px 10px 30px;
+        background: $blanc;
+        h2 {
+          @include title02;
+        }
+        p {
+          text-align: center;
+          margin: auto;
+          padding-bottom: 5px;
+        }
+        .introtext {
+          margin-top: 20px;
+          max-width: 600px;
+        }
+        .searchinputs {
+          position: relative;
+          display: flex;
+          width: 70%;
+          background-color: $bleuturquoise;
+          justify-content: space-around;
+          border-radius: 5px;
+          margin: 10px auto;
+          padding: 10px;
+          border: solid 2px $sabledore;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          label {
+            color: $blanc;
+            font-weight: bold;
+            text-align: center;
+          }
+          .input01,
+          .input02,
+          .input03 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 33%;
+          }
+          .input01 {
+            // width: 100%;
+            select {
+              display: block;
+              width: 100%;
+              height: 40px;
+              color: $marron;
+              background: $neutre;
+              border: solid 1px $sabledore;
+              padding: 5px;
+              border-radius: 3px;
+            }
+          }
+          input {
+            display: block;
+            width: 100%;
+            color: $sabledore;
+            background: $bleuturquoise;
+          }
+          span {
+            color: $blanc;
+          }
+          input[type="range"] {
+            -webkit-apparence: none;
+          }
+
+          /* Personnalisation de la couleur du curseur */
+          /* ***************************** Pour Firefox ******************************** */
+          input[type="range"]::-moz-range-thumb {
+            background: $sablechaud; /* Exemple : curseur de couleur verte */
+            border: solid 3px $sabledore; /* Supprime la bordure par défaut */
+            border-radius: 50%; /* Rend le curseur rond */
+            cursor: pointer; /* Change le curseur lorsqu'il est survolé */
+          }
+          input[type="range"]::-moz-range-track {
+            background: lightgray; /* Exemple : couleur de la piste */
+            height: 3px; /* Définit la hauteur de la piste */
+            border-radius: 5px; /* Rend la piste avec des bords arrondis */
+          }
+          /* Personnalisation de la couleur de la partie parcourue de la piste (progress) */
+          input[type="range"]::-moz-range-progress {
+            height: 3px; /* Définit la hauteur de la piste */
+            background: $sabledore; /* Exemple : couleur de la partie parcourue pour Firefox */
+            border-radius: 5px; /* Rend la piste avec des bords arrondis */
+          }
+
+          /* ********* Pour navigateurs basés sur WebKit (Chrome, Safari, etc.) ************** */
+          /* Personnalisation du curseur */
+          input[type="range"]::-webkit-slider-thumb {
+            background: #ffcd59; /* Exemple : couleur de fond du curseur */
+            border: solid 3px #feff81; /* Exemple : couleur de la bordure du curseur */
+            border-radius: 50%; /* Rend le curseur rond */
+            cursor: pointer; /* Change le curseur lorsqu'il est survolé */
+          }
+          /* Personnalisation de la couleur de la piste (track) */
+          input[type="range"]::-webkit-slider-track {
+            background: lightgray; /* Exemple : couleur de la piste */
+            height: 10px; /* Définit la hauteur de la piste */
+            border-radius: 50%; /* Rend la piste avec des bords arrondis */
+          }
+          /* Personnalisation de la couleur de la partie parcourue de la piste (progress) pour WebKit */
+          input[type="range"]::-webkit-progress-value {
+            background: #a2cce7; /* Exemple : couleur de la partie parcourue pour WebKit */
+            height: 10px; /* Définit la hauteur de la piste */
+            border-radius: 50%; /* Rend la piste avec des bords arrondis */
+          }
+        }
+        #hometourfilter {
+          .emptyform {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 3px $sablechaud;
+            border-radius: 10px;
+            background: $beigelight;
+            max-width: 700px;
+            margin: auto;
+            .beforeform {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              margin: auto;
+              padding: 20px;
+              text-align: center;
+              h2 {
+                font-size: 1.5rem;
+              }
+              p {
+                font-size: 1rem;
+              }
+              form {
+                position: relative;
+                display: block;
+                margin: auto;
+                text-align: left;
+                width: 100%;
+                // padding: 20px;
+                .formblock {
+                  display: flex;
+                  div {
+                    width: 50%;
+                    padding: 20px;
+                    input,
+                    textarea {
+                      display: block;
+                      width: 100%;
+                      margin: 5px auto;
+                      padding: 2px 5px;
+                      border: none;
+                      border-bottom: solid 1px $sabledore;
+                      // border-radius: 5px;
+                      &:focus {
+                        outline: none;
+                        border: solid 2px $bleuturquoise;
+                      }
+                    }
+                    label {
+                      display: block;
+                    }
+                    input {
+                      height: 30px;
+                      margin-bottom: 10px;
+                    }
+                    #yourduration,
+                    #yourbudget,
+                    #nombrepax {
+                      width: 50%;
+                      display: inline-block;
+                    }
+                    textarea {
+                      resize: vertical;
+                    }
+                  }
+                }
+                input[type="submit"] {
+                  position: relative;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  width: 300px;
+                  background: $bleuturquoise;
+                  border: none;
+                  border-radius: 5px;
+                  padding: 10px 20px;
+                  color: $blanc;
+                  font-size: 1rem;
+                  font-weight: bold;
+                  cursor: pointer;
+                  transition: 0.5s;
+                  &:hover {
+                    background: $sablechaud;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

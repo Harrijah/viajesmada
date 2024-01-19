@@ -1,0 +1,1385 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: calibri;
+  color: #562b05;
+  transition: 0.5s;
+}
+
+body {
+  background-color: #fdfaf7;
+}
+body .logomenu {
+  height: 50px;
+}
+
+#principalcontainer {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: url("http://localhost:8080/uploads/allee-des-baobabs.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-blend-mode: overlay;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#principalcontainer #ppltitle {
+  width: 100%;
+  position: relative;
+  padding: 100px 0 40px;
+  color: #fdfaf7;
+  text-align: center;
+}
+#principalcontainer #ppltitle h1 {
+  position: relative;
+  color: #fdfaf7;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 2.3rem;
+  margin-bottom: 30px;
+}
+#principalcontainer #ppltitle h1:after {
+  top: 55px;
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background-color: #fdfaf7;
+  border-radius: 50px;
+}
+#principalcontainer #ppltitle h1:before {
+  top: 57px;
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50.1%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background-color: #00a7a7;
+  border-radius: 50px;
+}
+#principalcontainer #ppltitle h1 span {
+  font-weight: bold;
+  color: #fdfaf7;
+}
+#principalcontainer #ppltitle h2 {
+  position: relative;
+  color: #fdfaf7;
+  margin-bottom: 30px;
+}
+#principalcontainer #ppltitle #principalimage {
+  position: relative;
+  padding: 30px 40px 0px;
+  display: flex;
+}
+#principalcontainer #ppltitle #principalimage .leftpart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+#principalcontainer #ppltitle #principalimage .leftpart div {
+  position: relative;
+  display: flex;
+  width: 70%;
+  background: #fdfaf7;
+  border: solid 3px #00a7a7;
+  border-radius: 60% 10% 65% 5%/10% 90% 12% 50%;
+  transition: 1s;
+  padding: 40px 30px;
+  box-shadow: -10px 5px 30px rgba(0, 0, 0, 0.4);
+}
+#principalcontainer #ppltitle #principalimage .leftpart div p {
+  position: relative;
+  text-align: left;
+  float: left;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #562b05;
+  clear: both;
+}
+#principalcontainer #ppltitle #principalimage .leftpart div p span {
+  float: left;
+  font-size: 3.5rem;
+  line-height: 2rem;
+  margin-right: 7px;
+}
+#principalcontainer #ppltitle #principalimage .leftpart div p span i {
+  color: #00a7a7;
+}
+#principalcontainer #ppltitle #principalimage .rightpart {
+  position: relative;
+}
+
+.stdcontainer {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.stdcontainer .firstbann {
+  position: relative;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+.stdcontainer .firstbann .filtercontainer {
+  position: relative;
+  display: block;
+}
+.stdcontainer .firstbann .filtercontainer .filterbox {
+  position: relative;
+  display: block;
+  width: 90%;
+  border: solid 3px #e6d7b1;
+  border-radius: 10px;
+  margin: 3% auto;
+  padding: 10px;
+  background: #ffffff;
+}
+.stdcontainer .firstbann .filtercontainer .filterbox h2 {
+  text-align: center;
+  margin: 15px auto 5px;
+}
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs {
+  position: relative;
+  display: flex;
+  width: 70%;
+  background-color: #00a7a7;
+  justify-content: space-around;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 10px;
+  border: solid 2px #d2b48c;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  /* Personnalisation de la couleur du curseur */
+  /* ***************************** Pour Firefox ******************************** */
+  /* Personnalisation de la couleur de la partie parcourue de la piste (progress) */
+  /* ********* Pour navigateurs basés sur WebKit (Chrome, Safari, etc.) ************** */
+  /* Personnalisation du curseur */
+  /* Personnalisation de la couleur de la piste (track) */
+  /* Personnalisation de la couleur de la partie parcourue de la piste (progress) pour WebKit */
+}
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs label {
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs .input01,
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs .input02,
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs .input03 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 33%;
+}
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs .input01 select {
+  display: block;
+  width: 100%;
+  height: 40px;
+  color: #562b05;
+  background: #fff;
+  border: solid 1px #d2b48c;
+  padding: 5px;
+  border-radius: 3px;
+}
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs input {
+  display: block;
+  width: 100%;
+  color: #d2b48c;
+  background: #00a7a7;
+}
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs span {
+  color: #ffffff;
+}
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs input[type=range] {
+  -webkit-apparence: none;
+}
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs input[type=range]::-moz-range-thumb {
+  background: #e6d7b1; /* Exemple : curseur de couleur verte */
+  border: solid 3px #d2b48c; /* Supprime la bordure par défaut */
+  border-radius: 50%; /* Rend le curseur rond */
+  cursor: pointer; /* Change le curseur lorsqu'il est survolé */
+}
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs input[type=range]::-moz-range-track {
+  background: lightgray; /* Exemple : couleur de la piste */
+  height: 3px; /* Définit la hauteur de la piste */
+  border-radius: 5px; /* Rend la piste avec des bords arrondis */
+}
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs input[type=range]::-moz-range-progress {
+  height: 3px; /* Définit la hauteur de la piste */
+  background: #d2b48c; /* Exemple : couleur de la partie parcourue pour Firefox */
+  border-radius: 5px; /* Rend la piste avec des bords arrondis */
+}
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs input[type=range]::-webkit-slider-thumb {
+  background: #ffcd59; /* Exemple : couleur de fond du curseur */
+  border: solid 3px #feff81; /* Exemple : couleur de la bordure du curseur */
+  border-radius: 50%; /* Rend le curseur rond */
+  cursor: pointer; /* Change le curseur lorsqu'il est survolé */
+}
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs input[type=range]::-webkit-slider-track {
+  background: lightgray; /* Exemple : couleur de la piste */
+  height: 10px; /* Définit la hauteur de la piste */
+  border-radius: 50%; /* Rend la piste avec des bords arrondis */
+}
+.stdcontainer .firstbann .filtercontainer .filterbox .searchinputs input[type=range]::-webkit-progress-value {
+  background: #a2cce7; /* Exemple : couleur de la partie parcourue pour WebKit */
+  height: 10px; /* Définit la hauteur de la piste */
+  border-radius: 50%; /* Rend la piste avec des bords arrondis */
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform h2 {
+  font-size: 1.5rem;
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform p {
+  font-size: 1rem;
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form {
+  position: relative;
+  display: block;
+  margin: auto;
+  text-align: left;
+  width: 80%;
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form .formblock {
+  display: flex;
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form .formblock div {
+  width: 50%;
+  padding: 20px;
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form .formblock div input,
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form .formblock div textarea {
+  display: block;
+  width: 100%;
+  margin: 5px auto;
+  padding: 2px 5px;
+  border: none;
+  border-bottom: solid 1px #d2b48c;
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form .formblock div input:focus,
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form .formblock div textarea:focus {
+  outline: none;
+  border: solid 2px #00a7a7;
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form .formblock div label {
+  display: block;
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form .formblock div input {
+  height: 30px;
+  margin-bottom: 10px;
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form .formblock div #yourduration,
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form .formblock div #yourbudget,
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form .formblock div #nombrepax {
+  width: 50%;
+  display: inline-block;
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form .formblock div textarea {
+  resize: vertical;
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form input[type=submit] {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  background: #00a7a7;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.stdcontainer .firstbann .filtercontainer #hometourfilter .emptyform .beforeform form input[type=submit]:hover {
+  background: #e6d7b1;
+}
+
+#saisieprod {
+  width: 100%;
+}
+#saisieprod h1 {
+  text-align: center;
+}
+#saisieprod #entreeprod {
+  width: 85%;
+  margin: auto;
+  align-items: center;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "a1 a1 a2 a3 a4 a4" "b1 b2 b3 b4 b5 b6" "c1 c2 b3 b4 b5 b6" "d1 d1 d1 d2 d2 d2" "y1 y2 y3 y4 y5 y6" "e1 e2 e3 e4 x0 x0" "f1 f2 f3 f4 x0 x0" "g1 g1 g1 g2 g2 g2" "h1 h1 h1 h2 h2 h2" "i1 i1 i1 i2 i2 i2" "j1 j1 j1 j2 j2 j2" "k1 k1 k1 k2 k2 k2" "l1 l1 l1 l2 l2 l2" "m1 m1 m1 m2 m2 m2" "n1 n1 n1 n2 n2 n2" "o1 o1 o1 o2 o2 o2" "p1 p1 p1 p2 p2 p2" "q1 q1 q1 q2 q2 q2" "r1 r1 r1 r2 r2 r2" "s1 s1 s1 s2 s2 s2" "t1 t1 t1 t2 t2 t2" "u1 u1 u1 u2 u2 u2" "v1 v1 v1 v2 v2 v2" "w1 w2 w2 w2 w2 w3";
+}
+#saisieprod #entreeprod textarea {
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #dac292;
+  background-color: #ffffff;
+}
+#saisieprod #entreeprod input, #saisieprod #entreeprod select, #saisieprod #entreeprod label {
+  height: 30px;
+  background-color: #ffffff;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #dac292;
+}
+#saisieprod #entreeprod #nomcircuit {
+  grid-area: a1;
+}
+#saisieprod #entreeprod #nombrejours {
+  grid-area: a2;
+}
+#saisieprod #entreeprod #prixmin {
+  grid-area: a3;
+}
+#saisieprod #entreeprod #euro {
+  grid-area: a4;
+}
+#saisieprod #entreeprod #labelcategorie01 {
+  grid-area: b1;
+}
+#saisieprod #entreeprod #categorie01 {
+  grid-area: c1;
+  height: 40px;
+}
+#saisieprod #entreeprod #labelthematique {
+  grid-area: b2;
+}
+#saisieprod #entreeprod #thematique {
+  grid-area: c2;
+  height: 40px;
+}
+#saisieprod #entreeprod #inclus {
+  grid-area: b3;
+  height: 60px;
+}
+#saisieprod #entreeprod #options01 {
+  grid-area: b4;
+  height: 60px;
+}
+#saisieprod #entreeprod #options02 {
+  grid-area: b5;
+  height: 60px;
+}
+#saisieprod #entreeprod #options03 {
+  grid-area: b6;
+  height: 60px;
+}
+#saisieprod #entreeprod #descripcourt {
+  grid-area: d1;
+  margin: 10px;
+  padding: 5px;
+}
+#saisieprod #entreeprod #tags {
+  grid-area: d2;
+  margin: 10px;
+  padding: 5px;
+}
+#saisieprod #entreeprod #region {
+  grid-area: y1;
+  margin: 10px;
+  padding: 5px;
+}
+#saisieprod #entreeprod #difficulty {
+  grid-area: y2;
+  margin: 10px;
+  padding: 5px;
+}
+#saisieprod #entreeprod #activity01 {
+  grid-area: y3;
+  margin: 10px;
+  padding: 5px;
+}
+#saisieprod #entreeprod #activity02 {
+  grid-area: y4;
+  margin: 10px;
+  padding: 5px;
+}
+#saisieprod #entreeprod #activity03 {
+  grid-area: y5;
+  margin: 10px;
+  padding: 5px;
+}
+#saisieprod #entreeprod #activity04 {
+  grid-area: y6;
+  margin: 10px;
+  padding: 5px;
+}
+#saisieprod #entreeprod #labelmap {
+  grid-area: e1;
+}
+#saisieprod #entreeprod #map {
+  grid-area: f1;
+}
+#saisieprod #entreeprod #labeldiapo01 {
+  grid-area: e2;
+}
+#saisieprod #entreeprod #diapo01 {
+  grid-area: f2;
+}
+#saisieprod #entreeprod #labeldiapo02 {
+  grid-area: e3;
+}
+#saisieprod #entreeprod #diapo02 {
+  grid-area: f3;
+}
+#saisieprod #entreeprod #labeldiapo03 {
+  grid-area: e4;
+}
+#saisieprod #entreeprod #diapo03 {
+  grid-area: f4;
+}
+#saisieprod #entreeprod #x0 {
+  grid-area: x0;
+}
+#saisieprod #entreeprod #jour01title {
+  grid-area: g1;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour01desc {
+  grid-area: h1;
+}
+#saisieprod #entreeprod #jour02title {
+  grid-area: g2;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour02desc {
+  grid-area: h2;
+}
+#saisieprod #entreeprod #jour03title {
+  grid-area: i1;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour03desc {
+  grid-area: j1;
+}
+#saisieprod #entreeprod #jour04title {
+  grid-area: i2;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour04desc {
+  grid-area: j2;
+}
+#saisieprod #entreeprod #jour05title {
+  grid-area: k1;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour05desc {
+  grid-area: l1;
+}
+#saisieprod #entreeprod #jour06title {
+  grid-area: k2;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour06desc {
+  grid-area: l2;
+}
+#saisieprod #entreeprod #jour07title {
+  grid-area: m1;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour07desc {
+  grid-area: n1;
+}
+#saisieprod #entreeprod #jour08title {
+  grid-area: m2;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour08desc {
+  grid-area: n2;
+}
+#saisieprod #entreeprod #jour09title {
+  grid-area: o1;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour09desc {
+  grid-area: p1;
+}
+#saisieprod #entreeprod #jour10title {
+  grid-area: o2;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour10desc {
+  grid-area: p2;
+}
+#saisieprod #entreeprod #jour11title {
+  grid-area: q1;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour11desc {
+  grid-area: r1;
+}
+#saisieprod #entreeprod #jour12title {
+  grid-area: q2;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour12desc {
+  grid-area: r2;
+}
+#saisieprod #entreeprod #jour13title {
+  grid-area: s1;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour13desc {
+  grid-area: t1;
+}
+#saisieprod #entreeprod #jour14title {
+  grid-area: s2;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour14desc {
+  grid-area: t2;
+}
+#saisieprod #entreeprod #jour15title {
+  grid-area: u1;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour15desc {
+  grid-area: v1;
+}
+#saisieprod #entreeprod #jour16title {
+  grid-area: u2;
+  margin-top: 10px;
+}
+#saisieprod #entreeprod #jour16desc {
+  grid-area: v2;
+}
+#saisieprod #entreeprod #submitmycirc {
+  grid-area: w2;
+  margin: 10px;
+}
+
+#navigationcontainer {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+#navigationcontainer #navigation {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 10%;
+  z-index: 2;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#navigationcontainer #navigation ul {
+  display: flex;
+}
+#navigationcontainer #navigation ul .menu01 {
+  display: flex;
+  width: 160px;
+  height: 50px;
+  list-style: none;
+}
+#navigationcontainer #navigation ul .menu01 a {
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 10px;
+  color: #562b05;
+  height: 50px;
+  width: 100%;
+  transition: 1s;
+  border-top: none;
+}
+#navigationcontainer #navigation ul .menu01 a:hover {
+  color: #fdfaf7;
+  background-color: #d2b48c;
+  border: solid 2px #fdfaf7;
+  border-top: none;
+}
+#navigationcontainer #navigation ul .menu01 .nav-active {
+  color: #fdfaf7;
+  background-color: #00a7a7;
+  border: solid 3px #d2b48c;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+#navigationcontainer #navigation ul .menu02 {
+  width: 160px;
+  height: 50px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  transition: 1s;
+}
+#navigationcontainer #navigation ul .menu02:hover .sousmenu01 {
+  display: flex;
+}
+#navigationcontainer #navigation ul .menu02:hover a {
+  color: #562b05;
+  background-color: #ffffff;
+}
+#navigationcontainer #navigation ul .menu02 a {
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 10px;
+  color: #562b05;
+  height: 50px;
+  width: 100%;
+  transition: 1s;
+  border-top: none;
+}
+#navigationcontainer #navigation ul .menu02 a:hover {
+  color: #fdfaf7;
+  background-color: #d2b48c;
+  border: solid 2px #fdfaf7;
+  border-top: none;
+}
+#navigationcontainer #navigation ul .menu02 .nav-active {
+  color: #fdfaf7;
+  background-color: #00a7a7;
+  border: solid 3px #d2b48c;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+#navigationcontainer #navigation ul .menu02 .sousmenu01 {
+  display: none;
+  flex-direction: column;
+  width: 160px;
+  height: 50px;
+  list-style: none;
+  transition: 1s;
+}
+#navigationcontainer #navigation ul .menu02 .sousmenu01 .sousmenu02 {
+  display: flex;
+  width: 160px;
+  height: 50px;
+  list-style: none;
+}
+#navigationcontainer #navigation ul .menu02 .sousmenu01 .sousmenu02:hover .sousmenu03 {
+  display: inline-block;
+}
+#navigationcontainer #navigation ul .menu02 .sousmenu01 .sousmenu02 .testo a {
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 10px;
+  color: #562b05;
+  height: 50px;
+  width: 100%;
+  transition: 1s;
+  border-top: none;
+  display: inline-block;
+  width: 160px;
+}
+#navigationcontainer #navigation ul .menu02 .sousmenu01 .sousmenu02 .testo a:hover {
+  color: #fdfaf7;
+  background-color: #d2b48c;
+  border: solid 2px #fdfaf7;
+  border-top: none;
+}
+#navigationcontainer #navigation ul .menu02 .sousmenu01 .sousmenu02 .sousmenu03 {
+  display: none;
+  flex-direction: column;
+  width: 160px;
+  height: 50px;
+  list-style: none;
+}
+#navigationcontainer #navigation ul .menu02 .sousmenu01 .sousmenu02 .sousmenu03 .sousmenu04 {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  height: 50px;
+  list-style: none;
+}
+
+#tourlistcontainer {
+  width: 100%;
+  margin: 7cap auto 20px;
+}
+#tourlistcontainer h1 {
+  text-align: center;
+  position: relative;
+}
+#tourlistcontainer h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #562b05;
+  border-radius: 50px;
+}
+#tourlistcontainer #tourintrocontainer {
+  width: 80%;
+  margin: auto;
+}
+#tourlistcontainer #tourintrocontainer h1 {
+  position: relative;
+  transition: 1s;
+}
+#tourlistcontainer #tourintrocontainer h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #562b05;
+  border-radius: 50px;
+}
+#tourlistcontainer #tourintrocontainer p {
+  width: 80%;
+  margin: 20px auto 20px;
+  text-align: center;
+}
+#tourlistcontainer #insidecontainer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tourpagecontainer .mytourcontainer {
+  width: 80%;
+  margin: 120px auto 20px;
+}
+.tourpagecontainer .mytourcontainer h1 {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+.tourpagecontainer .mytourcontainer h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #562b05;
+  border-radius: 50px;
+}
+.tourpagecontainer .mytourcontainer #tourpartone {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .topleftcol {
+  padding: 2% 0;
+  width: 50%;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .topleftcol .carouselimageradius {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol {
+  padding: 2% 2%;
+  width: 50%;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol h2 {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  color: #d2b48c;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #d2b48c;
+  border-radius: 50px;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol #tourdescript {
+  text-align: left;
+  margin: 0 auto 2%;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol #tourspecs {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "spec1 spec2 spec3";
+  margin: 1% auto 2%;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol #tourspecs #touroptions {
+  grid-area: spec1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol #tourspecs #touroptions .option {
+  font-size: 1rem;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol #tourspecs #diasincluido {
+  grid-area: spec2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol #tourspecs #diasincluido .option1 {
+  display: block;
+  font-size: 1.5rem;
+  color: #00a7a7;
+  font-weight: bold;
+  text-align: center;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol #tourspecs #tourprice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  grid-area: spec3;
+  flex-direction: column;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol #tourspecs #tourprice .option1 {
+  font-size: 2rem;
+  color: #d2b48c;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol #tourspecs #tourprice .option1 .option2 {
+  font-size: 1.2rem;
+  color: #d2b48c;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol #tourspecfoot {
+  display: flex;
+  justify-content: space-around;
+  margin: 1% auto 2%;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol #tourspecfoot .activitydifficulty,
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol #tourspecfoot .activitylist {
+  display: flex;
+  flex-direction: column;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol #tourspecfoot .difficultyclass,
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol #tourspecfoot .activityimg {
+  width: 40px;
+  margin: 5px;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol a {
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 10px;
+  color: #562b05;
+  height: 50px;
+  width: 100%;
+  transition: 1s;
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #00a7a7;
+  color: #d2b48c;
+  border: solid 1px #00a7a7;
+  border-radius: 5px;
+  transition: 1s;
+}
+.tourpagecontainer .mytourcontainer #tourpartone .toprightcol a:hover {
+  background-color: #ffffff;
+  color: #562b05;
+  border: solid 1px #00a7a7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.tourpagecontainer .mytourcontainer #tourparttwo {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middleleftcol {
+  width: 60%;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middleleftcol h2 {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  color: #d2b48c;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middleleftcol h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 3px;
+  background-color: #d2b48c;
+  border-radius: 50px;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middleleftcol .touritinerary {
+  margin: 1%;
+  padding: 1%;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middleleftcol .touritinerary .accordion {
+  transition: 1s ease-in-out;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middleleftcol .touritinerary .accordion .item {
+  position: relative;
+  transition: 1s ease-in-out;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middleleftcol .touritinerary .accordion .item .title {
+  text-align: left;
+  padding: 5px;
+  cursor: pointer;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middleleftcol .touritinerary .accordion .item .title h3:hover {
+  text-decoration: underline;
+  color: #d2b48c;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middleleftcol .touritinerary .accordion .item .underline {
+  text-decoration: underline;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middleleftcol .touritinerary .accordion .item .content {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  margin-bottom: 5px;
+  transition: 1s ease-in-out;
+  border-bottom: solid 1px #d2b48c;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middleleftcol .touritinerary .accordion .item .content p {
+  background: #ffffff;
+  padding: 10px 5px 30px;
+  transition: 1s ease-in-out;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middleleftcol .touritinerary .accordion .item .open {
+  visibility: visible;
+  height: auto;
+  margin-bottom: 20px;
+  background: #e6d7b1;
+  transition: 1s ease-in-out;
+  opacity: 1;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middlerightcol {
+  width: 40%;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middlerightcol h2 {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  color: #d2b48c;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middlerightcol h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #d2b48c;
+  border-radius: 50px;
+}
+.tourpagecontainer .mytourcontainer #tourparttwo #middlerightcol .tourmap {
+  margin: 1%;
+  border: solid 1px #d2b48c;
+}
+.tourpagecontainer .mytourcontainer #tourpartthree {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.tourpagecontainer .mytourcontainer #tourpartthree h2 {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  color: #d2b48c;
+}
+.tourpagecontainer .mytourcontainer #tourpartthree h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #d2b48c;
+  border-radius: 50px;
+}
+.tourpagecontainer .mytourcontainer #tourpartthree #tourform {
+  width: 48%;
+  margin: 0 2%;
+  padding: 0 5%;
+}
+.tourpagecontainer .mytourcontainer #tourpartthree #tourform input,
+.tourpagecontainer .mytourcontainer #tourpartthree #tourform textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px #d2b48c;
+  margin: 20px auto;
+}
+.tourpagecontainer .mytourcontainer #tourpartthree #tourform input:focus,
+.tourpagecontainer .mytourcontainer #tourpartthree #tourform textarea:focus {
+  outline: none;
+}
+.tourpagecontainer .mytourcontainer #tourpartthree #tourform textarea {
+  resize: vertical;
+}
+.tourpagecontainer .mytourcontainer #tourpartthree #tourform input[type=submit] {
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 10px;
+  color: #562b05;
+  height: 50px;
+  width: 100%;
+  transition: 1s;
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #d2b48c;
+  color: #562b05;
+  border-radius: 5px;
+  transition: 1s;
+}
+.tourpagecontainer .mytourcontainer #tourpartthree #tourform input[type=submit]:hover {
+  background-color: #00a7a7;
+  color: #d2b48c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.tourpagecontainer .mytourcontainer #tourpartthree #tourincluido {
+  width: 48%;
+  margin: 0 2%;
+  padding: 0 5%;
+}
+.tourpagecontainer .mytourcontainer #tourpartthree #tourincluido div {
+  border: solid 1px #d2b48c;
+  border-radius: 10px;
+  padding: 25px;
+  background: #ffffff;
+}
+.tourpagecontainer .mytourcontainer #tourpartthree #tourincluido div h3 {
+  margin: 2% auto 1%;
+  background: #ffffff;
+}
+.tourpagecontainer .mytourcontainer #tourpartthree #tourincluido div li {
+  background: #ffffff;
+}
+
+.similartitle {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  color: #d2b48c;
+}
+.similartitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #d2b48c;
+  border-radius: 50px;
+}
+
+.tourcontainer {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  height: auto;
+  margin: 1% 1%;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.tourcontainer:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+.tourcontainer .thumnimg a {
+  text-decoration: none;
+}
+.tourcontainer .thumnimg a div {
+  display: flex;
+  align-items: center;
+  max-height: 175px;
+  overflow: hidden;
+}
+.tourcontainer .thumnimg a div .imgthumb {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.tourcontainer .thumnimg h3 {
+  text-align: center;
+}
+.tourcontainer .tourinfos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: top;
+  padding: 1rem;
+}
+.tourcontainer .tourinfos .tourcolone {
+  width: 65%;
+  background: #fff;
+}
+.tourcontainer .tourinfos .tourcolone p,
+.tourcontainer .tourinfos .tourcolone span {
+  background: #fff;
+}
+.tourcontainer .tourinfos .tourcolone p {
+  font-weight: bold;
+}
+.tourcontainer .tourinfos .tourcolone span {
+  font-weight: 400;
+}
+.tourcontainer .tourinfos .tourcolone span .difficultyclass {
+  width: 30px;
+  background-color: #fff;
+}
+.tourcontainer .tourinfos .tourcoltwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  padding: 10px;
+  border: solid 1px #d2b48c;
+  border-radius: 5px;
+  text-align: end;
+}
+.tourcontainer .tourinfos .tourcoltwo div p {
+  font-weight: bold;
+}
+.tourcontainer .tourinfos .tourcoltwo div span {
+  font-weight: 400;
+}
+.tourcontainer .tourinfos .tourcoltwo div .daynumber {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #d2b48c;
+  margin-bottom: 0.5rem;
+}
+.tourcontainer .tourinfos .tourcoltwo div .tourprice {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #d2b48c;
+  margin-bottom: 0.5rem;
+}
+.tourcontainer .tourbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0 0 5px 5px;
+  background-color: #00a7a7;
+  border: 1px solid #00a7a7;
+  color: #d2b48c;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.tourcontainer .tourbtn:hover {
+  background-color: #fff;
+  color: #00a7a7;
+  border: 1px solid #00a7a7;
+}
+
+#footercontainer {
+  width: 100%;
+  margin: auto;
+  background-color: #d2b48c;
+}
+#footercontainer .footerrs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00a7a7;
+}
+#footercontainer .footerrs a {
+  background-color: #00a7a7;
+}
+#footercontainer .footerrs a .footerfa {
+  color: #fdfaf7;
+  font-size: 20px;
+  margin: 10px;
+  background-color: #00a7a7;
+  transition: 0.5s;
+}
+#footercontainer .footerrs a .footerfa:hover {
+  color: #d2b48c;
+}
+#footercontainer .footergrid {
+  display: grid;
+  grid-template-columns: 1FR 1FR 1FR;
+  grid-template-rows: auto;
+  grid-template-areas: "footer01 footer02 footer03";
+  padding: 20px 10px;
+  width: 80%;
+  margin: auto;
+  background-color: #d2b48c;
+}
+#footercontainer .footergrid h3, #footercontainer .footergrid h4, #footercontainer .footergrid li {
+  text-align: center;
+}
+#footercontainer .footergrid h3, #footercontainer .footergrid h4, #footercontainer .footergrid ul, #footercontainer .footergrid li, #footercontainer .footergrid a, #footercontainer .footergrid p, #footercontainer .footergrid span {
+  background-color: #d2b48c;
+}
+#footercontainer .footergrid ul {
+  list-style: none;
+}
+#footercontainer .footergrid ul li a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+#footercontainer .footergrid ul li a:hover {
+  color: #00a7a7;
+}
+#footercontainer .footergrid .footertours {
+  background-color: #d2b48c;
+}
+#footercontainer .footergrid .footerdestinations {
+  background-color: #d2b48c;
+}
+#footercontainer .footergrid .footercontact {
+  background-color: #d2b48c;
+}
+
+#similartour {
+  width: 80%;
+  margin: 0 auto 40px;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+#similartour .tourthumbcontainer {
+  display: inline-block;
+  max-width: 300px;
+  margin: 1% 3%;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+#similartour .tourthumbcontainer:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+#similartour .tourthumbcontainer .thumnimg a {
+  text-decoration: none;
+}
+#similartour .tourthumbcontainer .thumnimg a .imgthumb {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#similartour .tourthumbcontainer .thumnimg h3 {
+  text-align: center;
+}
+#similartour .tourthumbcontainer .tourinfos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: top;
+  padding: 1rem;
+}
+#similartour .tourthumbcontainer .tourinfos .tourcolone {
+  align-items: center;
+  width: 65%;
+  padding: 5px 15px 5px;
+  background: #fff;
+  border: solid 1px #d2b48c;
+  border-radius: 5px;
+}
+#similartour .tourthumbcontainer .tourinfos .tourcolone p,
+#similartour .tourthumbcontainer .tourinfos .tourcolone span {
+  background: #fff;
+}
+#similartour .tourthumbcontainer .tourinfos .tourcolone p {
+  font-weight: bold;
+}
+#similartour .tourthumbcontainer .tourinfos .tourcolone span {
+  font-weight: 400;
+}
+#similartour .tourthumbcontainer .tourinfos .tourcoltwo {
+  width: 35%;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: end;
+}
+#similartour .tourthumbcontainer .tourinfos .tourcoltwo p {
+  font-weight: bold;
+}
+#similartour .tourthumbcontainer .tourinfos .tourcoltwo span {
+  font-weight: 400;
+}
+#similartour .tourthumbcontainer .tourinfos .tourcoltwo .daynumber {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #d2b48c;
+  margin-bottom: 0.5rem;
+}
+#similartour .tourthumbcontainer .tourinfos .tourcoltwo .tourbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#similartour .tourthumbcontainer .tourinfos .tourcoltwo .tourbtn:hover {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+}/*# sourceMappingURL=index.css.map */

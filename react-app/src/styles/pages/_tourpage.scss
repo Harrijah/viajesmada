@@ -1,0 +1,274 @@
+.tourpagecontainer {
+  .mytourcontainer {
+    width: 90%;
+    margin: 120px auto 20px;
+    h1 {
+      text-align: center;
+      position: relative;
+      margin-bottom: 20px;
+      &::after {
+        @include titleafter(50%, 100px, $marron);
+      }
+    }
+    #tourpartone {
+      display: flex;
+      justify-content: space-between;
+      align-items: top;
+      .topleftcol {
+        padding: 2% 0;
+        width: 50%;
+        .carouselimageradius {
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+      }
+      .toprightcol {
+        padding: 2% 2%;
+        width: 50%;
+        h2 {
+          text-align: center;
+          position: relative;
+          margin-bottom: 20px;
+          color: $sabledore;
+          &::after {
+            @include titleafter(50%, 100px, $sabledore);
+          }
+        }
+        #tourdescript {
+          text-align: left;
+          margin: 0 auto 2%;
+        }
+        #tourspecs {
+          display: grid;
+          grid-template-rows: auto;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-areas: "spec1 spec2 spec3";
+          margin: 1% auto 2%;
+
+          #touroptions {
+            grid-area: spec1;
+            @include centerme;
+            .option {
+              font-size: 1rem;
+            }
+          }
+          #diasincluido {
+            grid-area: spec2;
+            @include centerme;
+            .option1 {
+              display: block;
+              font-size: 1.5rem;
+              color: $bleuturquoise;
+              font-weight: bold;
+              text-align: center;
+            }
+          }
+          #tourprice {
+            @include centerme;
+            grid-area: spec3;
+            flex-direction: column;
+            .option1 {
+              font-size: 2rem;
+              color: $sabledore;
+              .option2 {
+                font-size: 1.2rem;
+                color: $sabledore;
+              }
+            }
+          }
+        }
+        #tourspecfoot {
+          display: flex;
+          justify-content: space-around;
+          margin: 1% auto 2%;
+          .activitydifficulty,
+          .activitylist {
+            display: flex;
+            flex-direction: column;
+          }
+          .difficultyclass,
+          .activityimg {
+            width: 40px;
+            margin: 5px;
+          }
+        }
+        a {
+          @include menulink;
+          @include centerme;
+          width: 80%;
+          margin: 0 auto;
+          background-color: $bleuturquoise;
+          color: $sabledore;
+          border: solid 1px $bleuturquoise;
+          border-radius: 5px;
+          transition: 1s;
+          &:hover {
+            background-color: $blanc;
+            color: $marron;
+            border: solid 1px $bleuturquoise;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+
+    #tourparttwo {
+      display: flex;
+      justify-content: center;
+      align-items: top;
+      #middleleftcol {
+        width: 60%;
+        h2 {
+          text-align: center;
+          position: relative;
+          margin-bottom: 20px;
+          color: $sabledore;
+          &::after {
+            @include titleafter(50%, 75px, $sabledore);
+          }
+        }
+        .touritinerary {
+          margin: 1%;
+          padding: 1%;
+          .accordion {
+            transition: 1s ease-in-out;
+            .item {
+              position: relative;
+              transition: 1s ease-in-out;
+              .title {
+                text-align: left;
+                padding: 5px;
+                cursor: pointer;
+                h3:hover {
+                  text-decoration: underline;
+                  color: $sabledore;
+                }
+              }
+              .underline {
+                text-decoration: underline;
+              }
+              .content {
+                position: relative;
+                visibility: hidden;
+                opacity: 0;
+                height: 0;
+                margin-bottom: 5px;
+                transition: 1s ease-in-out;
+                border-bottom: solid 1px $sabledore;
+                // border-radius: 10px;
+                p {
+                  // border-radius: 5px;
+                  background: $blanc;
+                  padding: 10px 5px 30px;
+                  transition: 1s ease-in-out;
+                }
+              }
+              .open {
+                visibility: visible;
+                height: auto;
+                margin-bottom: 20px;
+                background: $sablechaud;
+                transition: 1s ease-in-out;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+      #middlerightcol {
+        width: 40%;
+        h2 {
+          text-align: center;
+          position: relative;
+          margin-bottom: 20px;
+          color: $sabledore;
+          &::after {
+            @include titleafter(50%, 50px, $sabledore);
+          }
+        }
+        .tourmap {
+          margin: 1%;
+          // padding: 1%;
+          // box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          border: solid 1px $sabledore;
+        }
+      }
+    }
+
+    #tourpartthree {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      h2 {
+        text-align: center;
+        position: relative;
+        margin-bottom: 20px;
+        color: $sabledore;
+        &::after {
+          @include titleafter(50%, 100px, $sabledore);
+        }
+      }
+      #tourform {
+        width: 48%;
+        margin: 0 2%;
+        padding: 0 5%;
+        input,
+        textarea {
+          display: block;
+          width: 100%;
+          border: none;
+          border-bottom: solid 1px $sabledore;
+          margin: 20px auto;
+          &:focus {
+            outline: none;
+          }
+        }
+        textarea {
+          resize: vertical;
+        }
+        input[type="submit"] {
+          @include menulink;
+          @include centerme;
+          width: 100%;
+          margin: 0 auto;
+          background-color: $sabledore;
+          color: $marron;
+          border-radius: 5px;
+          transition: 1s;
+          &:hover {
+            background-color: $bleuturquoise;
+            color: $sabledore;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+      #tourincluido {
+        width: 48%;
+        margin: 0 2%;
+        padding: 0 5%;
+        div {
+          border: solid 1px $sabledore;
+          border-radius: 10px;
+          padding: 25px;
+          background: $blanc;
+          h3 {
+            margin: 2% auto 1%;
+            background: $blanc;
+          }
+          li {
+            background: $blanc;
+          }
+        }
+      }
+    }
+  }
+}
+.similartitle {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  color: $sabledore;
+  &::after {
+    @include titleafter(50%, 100px, $sabledore);
+  }
+}

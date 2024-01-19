@@ -1,0 +1,40 @@
+#tourlistcontainer {
+  // position: relative;
+  width: 100%;
+  margin: 7cap auto 20px;
+  h1 {
+    text-align: center;
+    position: relative;
+    &::after {
+      @include titleafter(50%, 100px, $marron);
+    }
+  }
+  #tourintrocontainer {
+    // position: relative;
+    width: 80%;
+    margin: auto;
+    h1 {
+      // text-align: center;
+      position: relative;
+      transition: 1s;
+      &::after {
+        @include titleafter(50%, 100px, $marron);
+      }
+    }
+    p {
+      width: 80%;
+      margin: 20px auto 20px;
+      text-align: center;
+    }
+  }
+
+  #insidecontainer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    // align-items: center;
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

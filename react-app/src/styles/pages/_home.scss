@@ -1,0 +1,406 @@
+#principalcontainer {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: url("http://localhost:8080/uploads/allee-des-baobabs.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+  background-blend-mode: overlay;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  #ppltitle {
+    width: 100%;
+    position: relative;
+    padding: 100px 0 40px;
+    color: $beigelight;
+    text-align: center;
+    #principalimage {
+      position: relative;
+      // padding: 30px 40px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      #maintitle {
+        position: relative;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+          @include title01;
+          margin-top: 100px;
+          &:after {
+            top: 55px;
+            @include titleafter(50%, 150px, $beigelight);
+          }
+          &:before {
+            top: 57px;
+            @include titleafter(50.1%, 150px, $bleuturquoise);
+          }
+          span {
+            font-weight: bold;
+            color: $beigelight;
+          }
+        }
+        h2 {
+          position: relative;
+          color: $beigelight;
+          margin-bottom: 30px;
+        }
+      }
+
+      // .leftpart {
+      //   position: relative;
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: center;
+      //   width: 50%;
+
+      //   div {
+      //     position: relative;
+      //     display: flex;
+      //     width: 70%;
+      //     background: $beigelight;
+      //     border: solid 3px $bleuturquoise;
+      //     border-radius: 60% 10% 65% 5% / 10% 90% 12% 50%;
+      //     transition: 1s;
+      //     padding: 40px 30px;
+      //     box-shadow: -10px 5px 30px rgba(0, 0, 0, 0.4);
+
+      //     p {
+      //       position: relative;
+      //       text-align: left;
+      //       float: left;
+      //       font-size: 1rem;
+      //       font-weight: 400;
+      //       color: $marron;
+      //       clear: both;
+
+      //       span {
+      //         float: left;
+      //         font-size: 3.5rem;
+      //         line-height: 2rem;
+      //         margin-right: 7px;
+      //         i {
+      //           color: $bleuturquoise;
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+      // .rightpart {
+      //   position: relative;
+      //   height: 270px;
+      // }
+    }
+  }
+}
+.stdcontainer {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  #whattosee {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background: url("http://localhost:8080/static/Diapo-accueil-6.jpg"),
+      linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    background-blend-mode: overlay;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: auto;
+    padding: 30px 0;
+    .whattoseecontainer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+      width: 90%;
+      // margin: auto;
+      h2 {
+        @include title01;
+      }
+      .regioncontainer {
+        position: relative;
+        display: block;
+        width: 100%;
+        .norte,
+        .surecentro,
+        .este,
+        .oeste {
+          position: relative;
+          display: inline-block;
+          width: 40%;
+          height: auto;
+          background: $beigelight;
+          border: solid 3px $bleuturquoise;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          margin: 10px;
+          .insidetext {
+            display: flex;
+            height: 100%;
+            .imgctnr {
+              display: block;
+              position: relative;
+              width: 50%;
+              overflow: hidden;
+              border-radius: 5px 0 0 5px;
+            }
+            .textctnr {
+              width: 50%;
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              padding: 10px 0;
+              width: 100%;
+              height: 100%;
+              // background: rgba(0, 0, 0, 0.3);
+              // background: rgba(255, 255, 255, 0.2);
+
+              padding-top: 20px;
+              h3 {
+                @include title02;
+              }
+              p {
+                @include paragraphe(90%, left);
+              }
+              button {
+                @include button01;
+              }
+            }
+          }
+        }
+        .norte {
+          // grid-area: norte;
+          // background: url("http://localhost:8080/static/Diapo-accueil-5.jpg")
+          //   center/cover;
+          // margin-left: 50px;
+          // margin-bottom: -20px;
+          backdrop-filter: blur(10px);
+          .imgctnr {
+            background: url("http://localhost:8080/static/Diapo-accueil-5.jpg")
+              center/cover;
+          }
+
+          .insidetext {
+            border-radius: 10px;
+          }
+        }
+        .surecentro {
+          // grid-area: sur;
+          // background: url("http://localhost:8080/static/38498895_188775038491771_5934567659633901568_n-300x231.jpg")
+          //   center/cover;
+          // margin-left: -50px;
+          // margin-bottom: -50px;
+          backdrop-filter: blur(10px);
+          .imgctnr {
+            background: url("http://localhost:8080/static/hira-gasy-26055670.webp")
+              center/cover;
+          }
+
+          .insidetext {
+            border-radius: 10px;
+          }
+        }
+        .este {
+          // grid-area: este;
+          // background: url("http://localhost:8080/static/Diapo-5-2.jpg")
+          //   center/cover;
+          // margin-bottom: 40px;
+          backdrop-filter: blur(10px);
+          .imgctnr {
+            background: url("http://localhost:8080/static/37651996_1897036300335333_4758647992431411200_n.jpg")
+              center/cover;
+          }
+
+          .insidetext {
+            border-radius: 10px;
+          }
+        }
+        .oeste {
+          // grid-area: oeste;
+          // background: url("http://localhost:8080/static/Diapo-Ouest-3.jpg")
+          //   center/cover;
+          // margin-left: -50px;
+          backdrop-filter: blur(10px);
+          .imgctnr {
+            background: url("http://localhost:8080/static/37661125_1897037073668589_5257889789713055744_n.jpg")
+              center/cover;
+          }
+
+          .insidetext {
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  #thematicsbanner{
+    position: relative;
+    display: block;
+    .thematicscontainer{
+      position: relative;
+      display: block;
+      h2{
+        @include title02;
+        margin-top: 40px;
+      }
+      p{
+        @include paragraphe(70%, center);
+      }
+      .thematicsgrid{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto  auto auto auto;
+        grid-template-areas:
+        "a3 a3 a1 a2 a2 a2"
+        "a3 a3 b3 a2 a2 a2"
+        "a3 a3 a5 a5 a6 a6"
+        "a3 a3 a5 a5 a6 a6"
+        "a4 a4 a4 a4 a6 a6"
+        "a4 a4 a4 a4 a6 a6"
+        ;
+        width: 80%;
+        margin: 20px auto 80px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
+        .clasico, .naturaleza, .playas, .lunademiel, .aventura, .senderismo{
+          display: flex;
+          align-items: flex-end;
+          bottom: 0;
+          transition: 0.5s ease-in-out;
+          cursor: pointer;
+          &:hover > div > p {
+            display: block;
+            top: 0;
+          }
+          &:hover > div > h3 {
+            // display: block;
+            margin-bottom: 10px;
+          }
+          div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            // backdrop-filter: blur(2px);
+            background: rgba(0, 0, 0, 0.4);
+            // margin: auto;
+            margin-top: auto;
+            transition: 0.5s ease-in-out;
+            overflow: hidden;
+            h3{
+              @include title02;
+              font-size: 1.2rem;
+              margin-bottom: -40px;
+              transition: 0.5 ease-in-out;
+            }
+            p{
+              position: relative;
+              // display: none;
+              top: 150px;
+              margin: 20px auto;
+              color: $blanc;
+              transition: 0.5s ease-in-out;
+            }
+          }
+        }
+        .clasico{
+          position: relative;
+          grid-area: a1;
+          background: url('http://localhost:8080/static/Morondava-3.jpg') center/cover;
+          height: 160px;
+        }
+        .naturaleza{
+          position: relative;
+          grid-area: a2;
+          background: url('http://localhost:8080/static/indri-fiche-animaux-lemuriens-o2c04iu6eiasdjcj2bx573a31josju.jpg') top/cover;
+          height: 160px;
+        }
+        .playas{
+          position: relative;
+          grid-area: a3;
+          background: url('http://localhost:8080/static/plage-ile-sainte-marie-ravoraha.jpg') center/cover;
+          height: 320px;
+        }
+        .lunademiel{
+          position: relative;
+          grid-area: a4;
+          background: url('http://localhost:8080/static/Tsara-Komba-5.jpg') center/cover;
+          height: 160px;
+        }
+        .aventura{
+          position: relative;
+          grid-area: a5;
+          background: url('http://localhost:8080/static/Visita-de-los-parques-o1ic996itcd37kc8r0lxq469u1nxf1uemicveh.jpg') center/cover;
+          height: 160px;
+        }
+        .senderismo{
+          position: relative;
+          grid-area: a6;
+          background: url('http://localhost:8080/static/isalo-5-nz7oiynemsjmhn99235jk29ajdiwerw04la3sb48mw.jpg') center/cover;
+          height: 320px;
+        }
+      }
+    }
+
+  }
+
+  #textbann{
+    position: relative;
+    display: block;
+    width: 100%;
+    .internbann{
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 400px;
+      // box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      .leftpart{
+        position: inherit;
+        display: block;
+        width: 50%;
+        background: url('http://localhost:8080/static/414473988_1825631821201745_790118546279409083_n.jpg') center/cover;
+        p{
+          position: absolute;
+          color: $sablechaud;
+          text-align: center;
+          font-size: 2rem;
+          font-style: italic;
+          bottom: 0;
+          margin: 0 auto 20px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      .rightpart{
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 50%;
+        background: $blanc;
+        div{
+          h2{
+            @include title02;
+          }
+          p{
+            @include paragraphe(80%, center);
+          }
+        }
+      }
+
+    }
+  }
+
+}

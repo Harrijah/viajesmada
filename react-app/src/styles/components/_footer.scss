@@ -1,0 +1,63 @@
+#footercontainer {
+  width: 100%;
+  margin: auto;
+  background-color: $sabledore;
+  .footerrs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bleuturquoise;
+    a {
+      background-color: $bleuturquoise;
+      .footerfa {
+        color: $beigelight;
+        font-size: 20px;
+        margin: 10px;
+        background-color: $bleuturquoise;
+        transition: 0.5s;
+        &:hover {
+          color: $sabledore;
+        }
+      }
+    }
+  }
+
+  .footergrid {
+    display: grid;
+    grid-template-columns: 1FR 1FR 1FR;
+    grid-template-rows: auto;
+    grid-template-areas: "footer01 footer02 footer03";
+    padding: 20px 10px;
+    width: 80%;
+    margin: auto;
+    background-color: $sabledore;
+    h3, h4, li{
+      text-align: center;
+    }
+    h3, h4, ul, li, a, p, span{
+      background-color: $sabledore;
+    }
+    ul{
+      list-style: none;
+      li{
+        a{
+          text-decoration: none;
+          transition: 0.5s;
+          &:hover{
+            color: $bleuturquoise;
+          }
+        }
+      }
+    }
+    .footertours{
+      background-color: $sabledore;
+    }
+    .footerdestinations{
+      background-color: $sabledore;
+    }
+    .footercontact{
+      background-color: $sabledore;
+    }
+  }
+}

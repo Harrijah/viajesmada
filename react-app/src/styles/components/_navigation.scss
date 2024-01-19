@@ -1,0 +1,100 @@
+#navigationcontainer {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  #navigation {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 10%;
+    position: relative;
+    z-index: 2;
+    // background-color: $beigelight;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+    ul {
+      display: flex;
+      // position: relative;
+      .menu01 {
+        // position: relative;
+        display: flex;
+        @include menuli;
+        a {
+          @include menulink;
+          &:hover {
+            @include navactive;
+          }
+        }
+        .nav-active {
+          color: $beigelight;
+          background-color: $bleuturquoise;
+          border: solid 3px $sabledore;
+          border-top: none;
+          border-radius: 0 0 10px 10px;
+        }
+      }
+      .menu02 {
+        @include menuli;
+        display: flex;
+        flex-direction: column;
+        transition: 1s;
+        &:hover .sousmenu01 {
+          display: flex;
+        }
+        &:hover a {
+          @include hovermenu;
+        }
+        a {
+          @include menulink;
+          &:hover {
+            @include navactive;
+          }
+        }
+        .nav-active {
+          color: $beigelight;
+          background-color: $bleuturquoise;
+          border: solid 3px $sabledore;
+          border-top: none;
+          border-radius: 0 0 10px 10px;
+        }
+        .sousmenu01 {
+          display: none;
+          flex-direction: column;
+          @include menuli;
+          transition: 1s;
+          .sousmenu02 {
+            display: flex;
+            @include menuli;
+            &:hover .sousmenu03 {
+              display: inline-block;
+            }
+            .testo {
+              a {
+                @include menulink;
+                display: inline-block;
+                width: 160px;
+                &:hover {
+                  @include navactive;
+                }
+              }
+            }
+            .sousmenu03 {
+              display: none;
+              flex-direction: column;
+              @include menuli;
+              .sousmenu04 {
+                display: flex;
+                flex-direction: column;
+                @include menuli;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

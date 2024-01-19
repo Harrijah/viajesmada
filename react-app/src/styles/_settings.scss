@@ -1,0 +1,177 @@
+// Palette de couleurs Sable et Mer
+$marron: #562b05; // Marron
+$neutre: #fff;
+$beigelight: #fdfaf7; // Beige Jaune très clair
+
+$bleuocean: #0077cc; // Bleu Océan
+$sablechaud: #e6d7b1; // Sable Chaud
+$blanc: #ffffff; // Blanc éclatant
+$bleuclair: #a2c8e0; // Bleu Clair pour les accents
+$beigenaturel: #dac292; // Beige Naturel
+
+// Palette de couleurs Ambiance Plage :
+
+$bleuturquoise: #00a7a7; // Bleu Turquoise
+$sabledore: #d2b48c; // Sable Doré
+$blancnacre: #f4f4f4; // Blanc Nacré
+$vertdeau: #82c8a0; // Vert d'Eau
+$grisperle: #dcdcdc; // Gris Perle
+
+@mixin navactive {
+  color: $beigelight;
+  background-color: $sabledore;
+  border: solid 2px $beigelight;
+  border-top: none;
+}
+
+@mixin menulink {
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 10px;
+  color: $marron;
+  height: 50px;
+  width: 100%;
+  transition: 1s;
+  // border: solid 2px $beigelight;
+  // border-radius: 0 0 5px 5px;
+  border-top: none;
+}
+
+@mixin menuli {
+  width: 160px;
+  height: 50px;
+  list-style: none;
+}
+
+@mixin hovermenu {
+  color: $marron;
+  background-color: $blanc;
+}
+
+@mixin myinputs {
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid $beigenaturel;
+}
+
+@mixin centerme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+@mixin title01 {
+  position: relative;
+  text-align: center;
+  color: $beigelight;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 2.3rem;
+  margin-bottom: 30px;
+  &:after {
+    top: 55px;
+    @include titleafter(50%, 150px, $beigelight);
+  }
+  &:before {
+    top: 57px;
+    @include titleafter(50.1%, 150px, $bleuturquoise);
+  }
+}
+@mixin title02 {
+  position: relative;
+  color: $sabledore;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1rem;
+  text-align: center;
+  top: 15px;
+  margin-bottom: 40px;
+
+  // top: 50%;
+  // transform: translateY(-50%);
+  &:after {
+    top: 30px;
+    @include titleafter(50%, 50px, $sabledore);
+  }
+}
+
+@mixin titleafter($position, $width, $color) {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: $position;
+  transform: translateX(-50%);
+  width: $width;
+  height: 3px;
+  background-color: $color;
+  border-radius: 50px;
+}
+
+@mixin paragraphe($width, $alignement) {
+  display: block;
+  position: relative;
+  width: $width;
+  text-align: $alignement;
+  margin: auto;
+}
+@mixin button01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #00a7a7;
+  border: 1px solid #00a7a7;
+  color: #d2b48c;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.9s ease-in-out;
+  width: 40%;
+  margin: 10px auto;
+  &:hover {
+    color: $bleuturquoise;
+    background-color: $beigelight;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: calibri;
+  color: $marron;
+  transition: 0.5s;
+}
+body {
+  background-color: $beigelight;
+  .logomenu {
+    height: 50px;
+  }
+  .contactbann {
+    .insidecontact {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 75%;
+      background: $beigelight;
+      margin: 40px auto;
+      .principcontact {
+        h2 {
+          @include title02;
+        }
+        p {
+          @include paragraphe(80%, center);
+        }
+        button{
+          @include button01;
+        }
+      }
+    }
+  }
+}

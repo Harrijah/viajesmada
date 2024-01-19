@@ -1,0 +1,92 @@
+#activities {
+  position: relative;
+  display: block;
+  width: 100%;
+  .activitycontainer {
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      @include title02;
+      margin: 40px auto 20px;
+    }
+    .insideactivities {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .bouton01,
+      .bouton02 {
+        display: block;
+        position: relative;
+        width: 10%;
+        text-align: center;
+        button {
+          font-size: 3rem;
+          border: none;
+          background-color: $beigelight;
+          text-decoration: none;
+          cursor: pointer;
+          i {
+            color: $bleuturquoise;
+            transition: 0.3s;
+            &:hover {
+              color: $sabledore;
+              font-size: 3.3rem;
+            }
+          }
+        }
+      }
+      .persocarousel {
+        position: relative;
+        display: block;
+        width: 80%;
+        margin: auto;
+        .slide {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .leftpart {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            width: 40%;
+            text-align: right;
+            div {
+              display: block;
+              h3 {
+                @include title02;
+                font-size: 1.5rem;
+              }
+              p {
+                @include paragraphe(80%, center);
+              }
+            }
+          }
+          .rightpart {
+            position: relative;
+            display: block;
+            width: 40%;
+            overflow: hidden;
+            border-radius: 10px;
+            // box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            img {
+              width: auto;
+              // max-width: 400px;
+              height: 300px;
+              text-align: center;
+              border-radius: 10px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            }
+          }
+        }
+        .diapoinactive {
+          display: none;
+        }
+      }
+    }
+  }
+}
