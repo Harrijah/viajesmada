@@ -1,14 +1,15 @@
 import React from "react";
 
+// CSS : Tourthumbs.scss
 const Tour = ({ tour }) => {
   return (
     <div className="tourcontainer">
-      <div className="thumnimg">
+      <div className="thumnimg" id={tour.id}>
         <a href={`/tourpage/${tour.id}`}>
           <div>
             <img
               className="imgthumb"
-              src={`http://localhost:8080/uploads/${tour.diapo01}`}
+              src={`https://tours.viajes-madagascar.mg/uploads/${tour.diapo01}`}
               alt={tour.nomcircuit}
             />
           </div>
@@ -20,14 +21,14 @@ const Tour = ({ tour }) => {
           <p>
             Région : <span>{tour.region}</span>
           </p>
+          {/* <p>
+            Tema : <span>{tour.thematique}</span>
+          </p> */}
           <p>
-            Thème : <span>{tour.thematique}</span>
+            Etiquetas : <span>{tour.tags}</span>
           </p>
-          <p>
-            Tags : <span>{tour.tags}</span>
-          </p>
-          {/* <p>Difficulté : <span>
-            <img className='difficultyclass' src={`http://localhost:8080/icons/${tour.difficulty}`} alt="difficulté" />
+          {/* <p>Dificultad : <span>
+            <img className='difficultyclass' src={`https://tours.viajes-madagascar.mg/public/icons/${tour.difficulty}`} alt="difficulté" />
           </span>
           </p> */}
         </div>
@@ -43,7 +44,7 @@ const Tour = ({ tour }) => {
         </div>
       </div>
       <a href={`/tourpage/${tour.id}`} className="tourbtn">
-        Plus de détails
+        Más detalles
       </a>
     </div>
   );

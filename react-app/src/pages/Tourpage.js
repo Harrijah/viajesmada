@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import { isEmpty } from "../components/Utils";
@@ -8,14 +9,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { getOneTour } from "../actions/tour.action";
 import Itineraire from "../components/Itineraire";
 import Formulaire from "../components/Formulaire";
-import Footer from "../components/Footer";
 import Tourthumbnails from "../components/Tourthumbnails";
+import Map from "../components/Map";
 
+
+// _tourpage.scss
 const Tourpage = () => {
   const id = useParams();
   const dispatch = useDispatch();
-  const mytour = useSelector((state) => state.oneTourReducer);
   const tours = useSelector((state) => state.tourReducer);
+  const mytour = useSelector((state) => state.oneTourReducer);
+
+  // const itineraryidlist = !isEmpty(itineraries) && itineraries.find((itid) => itid)
 
   useEffect(() => {
     const getmyone = async () => {
@@ -26,9 +31,10 @@ const Tourpage = () => {
   }, [id]);
 
   return (
-    <div>
+    <div >
       <Navigation />
       <div className="tourpagecontainer">
+        <div className="randomimage"></div>
         <div className="mytourcontainer">
           <h1>{mytour && mytour.nomcircuit}</h1>
 
@@ -42,50 +48,47 @@ const Tourpage = () => {
                 autoPlay={true}
                 infiniteLoop={true}
               >
-                {
+                {/* {
                   Array.from({ length: 5 }, (_, i) => i + 1).map((i) => {
                   
                   })
-                }
+                } */}
                 <div>
                   <img
                     className="carouselimageradius"
-                    src={`http://localhost:8080/uploads/${mytour.diapo01}`}
+                    src={`https://tours.viajes-madagascar.mg/uploads/${mytour.diapo01}`}
                   />
                   {/* <p className="legend">Legend 1</p> */}
                 </div>
                 <div>
                   <img
                     className="carouselimageradius"
-                    src={`http://localhost:8080/uploads/${mytour.diapo02}`}
+                    src={`https://tours.viajes-madagascar.mg/uploads/${mytour.diapo02}`}
                   />
                   {/* <p className="legend">Legend 2</p> */}
                 </div>
                 <div>
                   <img
                     className="carouselimageradius"
-                    src={`http://localhost:8080/uploads/${mytour.diapo03}`}
+                    src={`https://tours.viajes-madagascar.mg/uploads/${mytour.diapo03}`}
                   />
                   {/* <p className="legend">Legend 3</p> */}
                 </div>
-                
-                {mytour && mytour.diapo04 && (
+
+                {/* {mytour && mytour.diapo04 && (
                   <div>
                     <img
                       className="carouselimageradius"
-                      src={`http://localhost:8080/uploads/${mytour.diapo04}`}
+                      src={`https://tours.viajes-madagascar.mg/uploads/${mytour.diapo04}`}
                       alt="Diapo 04"
                     />
                     <p className="legend">Legend 4</p>
                   </div>
-                )}
-                  
-                  
-                  
+                )} */}
               </Carousel>
             </div>
             <div className="toprightcol">
-              <h2>A propos du circuit</h2>
+              <h2>Acerca del circuito</h2>
               <p id="tourdescript">{mytour && mytour.descripcourt}</p>
               <div id="tourspecs">
                 <div id="touroptions">
@@ -123,20 +126,20 @@ const Tourpage = () => {
               </div>
               <div id="tourspecfoot">
                 <div className="activitydifficulty">
-                  <p>Difficulté : </p>
+                  <p>Dificultad : </p>
                   <img
                     className="difficultyclass"
-                    src={`http://localhost:8080/icons/${mytour.difficulty}`}
+                    src={`https://tours.viajes-madagascar.mg/public/icons/${mytour.difficulty}`}
                     alt="difficulté"
                   />
                 </div>
                 <div className="activitylist">
-                  <p>Activités : </p>
+                  <p>Actividades : </p>
                   <div>
                     {mytour && !mytour.activity01 == "" ? (
                       <img
                         className="activityimg"
-                        src={`http://localhost:8080/icons/${mytour.activity01}`}
+                        src={`https://tours.viajes-madagascar.mg/public/icons/${mytour.activity01}`}
                         alt=""
                       />
                     ) : (
@@ -145,7 +148,7 @@ const Tourpage = () => {
                     {mytour && !mytour.activity02 == "" ? (
                       <img
                         className="activityimg"
-                        src={`http://localhost:8080/icons/${mytour.activity02}`}
+                        src={`https://tours.viajes-madagascar.mg/public/icons/${mytour.activity02}`}
                         alt=""
                       />
                     ) : (
@@ -154,7 +157,7 @@ const Tourpage = () => {
                     {mytour && !mytour.activity03 == "" ? (
                       <img
                         className="activityimg"
-                        src={`http://localhost:8080/icons/${mytour.activity03}`}
+                        src={`https://tours.viajes-madagascar.mg/public/icons/${mytour.activity03}`}
                         alt=""
                       />
                     ) : (
@@ -163,7 +166,7 @@ const Tourpage = () => {
                     {mytour && !mytour.activity04 == "" ? (
                       <img
                         className="activityimg"
-                        src={`http://localhost:8080/icons/${mytour.activity04}`}
+                        src={`https://tours.viajes-madagascar.mg/public/icons/${mytour.activity04}`}
                         alt=""
                       />
                     ) : (
@@ -183,12 +186,8 @@ const Tourpage = () => {
               <Itineraire mytour={mytour} />
             </div>
             <div id="middlerightcol">
-              <h2>Carte</h2>
-              <img
-                className="tourmap"
-                src={`http://localhost:8080/uploads/${mytour.map}`}
-                alt="map"
-              />
+              <h2>Mapa interactivo</h2>
+                <Map />
             </div>
           </div>
 
@@ -241,11 +240,12 @@ const Tourpage = () => {
         </div>
       </div>
 
-      <h2 className="similartitle">Circuits similaires</h2>
+      <h2 className="similartitle">Circuitos similares</h2>
       <div id="similartour">
         {!isEmpty(tours) &&
           tours
             .filter((tour) => tour.thematique == mytour.thematique)
+            .filter((tour) => tour.nombrejours !== '50') // Filtrer les tours où nombrejours n'est pas égal à zéro
             .map((tour) => <Tourthumbnails tour={tour} key={tour.id} />)}
       </div>
       <Footer />

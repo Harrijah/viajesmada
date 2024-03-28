@@ -1,11 +1,19 @@
+$vert: #228B22;
+
 .tourpagecontainer {
+  .randomimage {
+    width: 100%;
+    height: 250px;
+    background: url("https://tours.viajes-madagascar.mg/uploads/baobab3.jpg")
+      center/cover;
+  }
   .mytourcontainer {
-    width: 90%;
-    margin: 120px auto 20px;
+    width: 80%;
+    margin: 0 auto 20px;
     h1 {
       text-align: center;
       position: relative;
-      margin-bottom: 20px;
+      margin: 20px;
       &::after {
         @include titleafter(50%, 100px, $marron);
       }
@@ -14,10 +22,22 @@
       display: flex;
       justify-content: space-between;
       align-items: top;
+      @media screen and (max-width: 719px){
+        display: block;
+      }
       .topleftcol {
         padding: 2% 0;
         width: 50%;
+        margin: 0 auto 0;
+        @media screen and (max-width: 719px){
+          width: 100%;
+        }
+        Carousel{
+          width: 90%;
+          margin: auto;
+        }
         .carouselimageradius {
+          width: 100%;
           border-radius: 10px;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
@@ -25,6 +45,10 @@
       .toprightcol {
         padding: 2% 2%;
         width: 50%;
+        margin: auto;
+        @media screen and (max-width: 719px){
+          width: 100%;
+        }
         h2 {
           text-align: center;
           position: relative;
@@ -44,12 +68,17 @@
           grid-template-columns: 1fr 1fr 1fr;
           grid-template-areas: "spec1 spec2 spec3";
           margin: 1% auto 2%;
+          @media screen and (max-width: 400px){
+           display: block;
+           text-align: left;
+          }
 
           #touroptions {
             grid-area: spec1;
+            text-align: left;
             @include centerme;
             .option {
-              font-size: 1rem;
+              font-size: 0.9rem;
             }
           }
           #diasincluido {
@@ -57,7 +86,7 @@
             @include centerme;
             .option1 {
               display: block;
-              font-size: 1.5rem;
+              font-size: 1.2rem;
               color: $bleuturquoise;
               font-weight: bold;
               text-align: center;
@@ -81,6 +110,10 @@
           display: flex;
           justify-content: space-around;
           margin: 1% auto 2%;
+          @media screen and (max-width: 400px){
+           display: block;
+           margin-bottom: 10px;
+          }
           .activitydifficulty,
           .activitylist {
             display: flex;
@@ -116,8 +149,18 @@
       display: flex;
       justify-content: center;
       align-items: top;
+      width: 95%;
+      margin: auto;
+      @media screen and (max-width: 719px){
+        display: block;
+        margin: auto;
+      }
       #middleleftcol {
-        width: 60%;
+        width: 50%;
+        margin: auto;
+        @media screen and (max-width: 719px){
+          width: 90%;
+        }
         h2 {
           text-align: center;
           position: relative;
@@ -177,6 +220,12 @@
       }
       #middlerightcol {
         width: 40%;
+        margin: auto;
+        margin-top: 0;
+        @media screen and (max-width: 719px){
+          width: 90%;
+          margin: auto;
+        }
         h2 {
           text-align: center;
           position: relative;
@@ -188,9 +237,206 @@
         }
         .tourmap {
           margin: 1%;
-          // padding: 1%;
+          // paddinnpm startg: 1%;
           // box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           border: solid 1px $sabledore;
+        }
+        .svgmap {
+          transition: 1s;
+          .showme {
+            display: block;
+          }
+          .hideme {
+            display: none;
+          }
+          .tourcontainer {
+            display: block;
+            position: absolute;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            max-width: fit-content;
+            height: fit-content;
+            margin: 1% 1%;
+            padding: 0;
+            background: $neutre;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            overflow: visible;
+            z-index: 2;
+            transition: 1s ease-in-out;
+            animation: showcard 1s ease-in-out forwards;
+            transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+            @keyframes showcard {
+              from {
+                display: block;
+              }
+              to {
+                display: none;
+              }
+            }
+
+            &:hover {
+              box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            }
+            .thumnimg {
+              text-decoration: none;
+              div {
+                display: flex;
+                align-items: center;
+                max-height: 175px;
+                overflow: hidden;
+                border-radius: 5px 5px 0 0;
+                .imgthumb {
+                  max-height: 200px;
+                  width: 100%;
+                  border-radius: 5px 5px 0 0;
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                }
+              }
+              h4 {
+                text-align: center;
+                margin: 5px 0;
+              }
+            }
+            .tourinfos {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              height: 125px;
+              align-items: top;
+              padding: 5px 10px;
+              background: $beigelight;
+              overflow-y: scroll;
+              p {
+                background: $neutre;
+                text-align: left !important;
+                background: $beigelight;
+                font-weight: 400;
+                color: $marron;
+              }
+            }
+          }
+          svg {
+            overflow: visible;
+            width: 100%;
+            z-index: 2;
+            .mappin {
+              .hideme {
+                display: none;
+              }
+              .showme {
+                display: block;
+              }
+              .itineraries{
+                .showme {
+                  display: block;
+                  g{
+                    path{
+                      fill: $marron;
+                      stroke: none;
+                    }
+                  }
+                  path{
+                    stroke: $marron3;
+                    stroke-width: 3px;
+                    fill: none;
+                    &:hover{
+                      fill:none !important;
+                    }
+                  }
+                  .planepath{
+                    stroke: $grey !important;
+                    stroke-width: 3px !important;
+                    fill:none !important;
+                  }
+                  .plane{
+                    stroke: $marron !important;
+                    stroke-width: 0.3px !important;
+                    fill: white;
+                  }
+                  .planepath{
+                    stroke: $grey !important;
+                    stroke-width: 3px !important;
+                    fill:none !important;
+                  }
+                  .river{
+                    stroke: rgba(0, 0, 255, 0.505) !important;
+                    stroke-width: 3px !important;
+                    fill:none !important;
+                  }
+              }
+            }
+              g {
+                .showme {
+                  display: block;
+                }
+                path {
+                  fill: $sablechaud;
+                  stroke: orange;
+                  cursor: pointer;
+                  z-index: 2;
+                  transition: 1s;
+                  &:hover {
+                    transition: 1s;
+                    fill: $marron !important;
+                    cursor: pointer;
+                  }
+                }
+                g {
+                  g {
+                    path {
+                      stroke-width: 0.25;
+                      stroke: none;
+                      fill: $marron;
+                      &:hover {
+                        fill: none !important ;
+                        stroke: none;
+                      }
+                    }
+                  }
+                  .park{
+                    path{
+                      stroke: $vert;
+                    }
+                  }
+                }
+                
+                .beach{
+                  g{
+                    path{
+                      stroke: none !important;
+                      // stroke-width: 3px !important;
+                      fill:blue !important;
+                    }
+                  }
+                }
+              }
+              #itineraire {
+                g {
+                  path {
+                    stroke-width: 2;
+                    stroke: $marron2;
+                    fill: none;
+                  }
+                  g {
+                    path {
+                      stroke-width: 0.25;
+                      stroke: none;
+                      fill: $marron;
+                    }
+                  }
+                }
+              }
+              text {
+                color: $marron;
+                cursor: pointer;
+              }
+            }
+          }
         }
       }
     }
@@ -199,6 +445,11 @@
       display: flex;
       justify-content: center;
       margin: auto;
+      align-items: top;
+      @media screen and (max-width: 719px){
+        display: block;
+        margin: auto;
+      }
       h2 {
         text-align: center;
         position: relative;
@@ -212,6 +463,14 @@
         width: 48%;
         margin: 0 2%;
         padding: 0 5%;
+        @media screen and (max-width: 719px){
+          width: 90%;
+          margin: auto;
+        }
+        @media screen and (max-width: 450px){
+          width: 100%;
+          margin: auto;
+        }
         input,
         textarea {
           display: block;
@@ -219,6 +478,7 @@
           border: none;
           border-bottom: solid 1px $sabledore;
           margin: 20px auto;
+          background: $beigelight;
           &:focus {
             outline: none;
           }
@@ -246,6 +506,15 @@
         width: 48%;
         margin: 0 2%;
         padding: 0 5%;
+        margin-top: 0;
+        @media screen and (max-width: 719px){
+          width: 90%;
+          margin: auto;
+        }
+        @media screen and (max-width: 450px){
+          width: 100%;
+          margin: auto;
+        }
         div {
           border: solid 1px $sabledore;
           border-radius: 10px;

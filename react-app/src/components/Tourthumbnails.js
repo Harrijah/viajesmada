@@ -1,5 +1,8 @@
 import React from "react";
 
+
+
+// for the tour page
 const Tour = ({ tour }) => {
   return (
     <div className="tourthumbcontainer">
@@ -7,7 +10,7 @@ const Tour = ({ tour }) => {
         <a href={`/tourpage/${tour.id}`}>
           <img
             className="imgthumb"
-            src={`http://localhost:8080/uploads/${tour.diapo01}`}
+            src={`https://tours.viajes-madagascar.mg/uploads/${tour.diapo01}`}
             alt={tour.nomcircuit}
           />
           <h3>{tour.nomcircuit}</h3>
@@ -16,12 +19,19 @@ const Tour = ({ tour }) => {
       <div className="tourinfos">
         <div className="tourcolone">
           <p>Région : {tour.region}</p>
-          <p>Thème : <span>{tour.thematique}</span></p>
-          <p>Tags : <span>{tour.tags}</span></p>
+          {/* <p>Tema : <span>{tour.thematique}</span></p> */}
+          <p>
+            Etiquetas : <span>{tour.tags}</span>
+          </p>
         </div>
         <div className="tourcoltwo">
-          <p><span className="daynumber">{tour.nombrejours}</span> dias</p>
-          <a href={`/tourpage/${tour.id}`} className="tourbtn"> Plus de détails</a>
+          <p>
+            <span className="daynumber">{tour.nombrejours}</span> dias
+          </p>
+          <a href={`/tourpage/${tour.id}`} className="tourbtn">
+            {" "}
+            Más detalles
+          </a>
         </div>
       </div>
     </div>

@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <div id="footercontainer">
       <div className="footerrs">
-        <a href="https://www.facebook.com/">
+        <a href="https://www.facebook.com/profile.php?id=100063642707664">
           <i className="fab fa-facebook footerfa"></i>
         </a>
-        <a href="https://www.linkedin.com/">
+        <a href="https://www.linkedin.com/company/13029058/">
           <i className="fab fa-linkedin footerfa"></i>
         </a>
       </div>
@@ -17,33 +17,39 @@ const Footer = () => {
           <h3>Viajes a Madagascar</h3>
           <ul>
             <li>
-              <a href="#">Viajes tematicos</a>
+              <a href="/classique/general">Circuitos clasicos</a>
             </li>
             <li>
-              <a href="#">Circuitos clasicos</a>
+              <a href="/thematique/global">Viajes tematicos</a>
             </li>
             <li>
-              <a href="#">Viaje a medida</a>
+              <a href="/thematique/nature">Naturaleza e vida sylvestre</a>
             </li>
             <li>
-              <a href="#">Viajes organizados</a>
+              <a href="/thematique/aventure">Aventura</a>
+            </li>
+            <li>
+              <a href="/thematique/balneaire">Balneario</a>
+            </li>
+            <li>
+              <a href="/thematique/culturel">Viaje culturale</a>
             </li>
           </ul>
         </div>
         <div className="footerdestinations">
-          <h3>Hoteles a Madagascar</h3>
+          <h3>Visita por región</h3>
           <ul>
             <li>
-              <a href="#">Visitar al Norte</a>
+              <a href="/norte/norte">Visitar al Norte</a>
             </li>
             <li>
-              <a href="#">Visitar al Este</a>
+              <a href="/este/este">Visitar al Este</a>
             </li>
             <li>
-              <a href="#">Visitar al Sur</a>
+              <a href="/sur/sur">Visitar al Sur</a>
             </li>
             <li>
-              <a href="#">Visitar al Oeste</a>
+              <a href="/oeste/oeste">Visitar al Oeste</a>
             </li>
           </ul>
         </div>
@@ -57,9 +63,8 @@ const Footer = () => {
           <ul>
             <li><span style={{fontWeight: 'bold'}}>Dirección :</span> Lot IAV 310 C Iavoloha Antananarivo 102</li>
             <li><span >Madagascar</span></li>
-            <li><span style={{ fontWeight: 'bold'}}>Teléfono :</span> +261 (0)32 12 667 33</li>
-            <li><span style={{fontWeight: 'bold'}}>E-mail :</span> office@viajes-mada.com</li>
-            <li><span style={{fontWeight: 'bold'}}>Whatsapp :</span> +261 (0)34 45 844 92</li>
+            <li><span style={{ fontWeight: 'bold'}}>Teléfono/Whatsapp :</span> +261 (0)34 45 844 92</li>
+            <li><span style={{fontWeight: 'bold'}}>E-mail :</span> contacto@viajes-madagascar.mg</li>
             <li><span style={{fontWeight: 'bold'}}>Skype :</span> Viajes Mada</li>
           </ul>
         </div>

@@ -1,16 +1,22 @@
 #tourlistcontainer {
   // position: relative;
   width: 100%;
-  margin: 7cap auto 20px;
+  .randomimage {
+    width: 100%;
+    height: 250px;
+    background: url("https://tours.viajes-madagascar.mg/uploads/SECOND.jpg")
+      bottom/cover;
+  }
   h1 {
+    margin-top: 20px;
     text-align: center;
     position: relative;
-    &::after {
+    &:after {
       @include titleafter(50%, 100px, $marron);
     }
   }
   #tourintrocontainer {
-    // position: relative;
+    position: relative;
     width: 80%;
     margin: auto;
     h1 {
@@ -25,6 +31,9 @@
       width: 80%;
       margin: 20px auto 20px;
       text-align: center;
+      @media screen and (max-width: 500px){
+        width: 100%;
+      }
     }
   }
 
@@ -36,5 +45,79 @@
     height: auto;
     justify-content: center;
     flex-wrap: wrap;
+    @media screen and (max-width: 630px){
+      display: block;
+      margin: auto;
+      display: flex;
+      // align-items: center;
+      height: auto;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    h2 {
+      text-align: center;
+      position: relative;
+      margin-bottom: 20px;
+      color: $sabledore;
+      &::after {
+        @include titleafter(50%, 100px, $sabledore);
+      }
+    }
+    .carousel{
+      width: 48%;
+      @media screen and (max-width: 630px){
+        width: 90%;
+        margin: auto;
+        
+      }
+    }
+    .carousel{
+      width: 48%;
+      .contact{
+      @media screen and (max-width: 615px){
+        display: none;
+      }
+    }
+    }
+    #tourform {
+      width: 48%;
+      margin: 0 2%;
+      padding: 0 5%;
+      @media screen and (max-width: 630px){
+        width: 90%;
+        margin: auto;
+        
+      }
+      input,
+      textarea {
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: solid 1px $sabledore;
+        margin: 20px auto;
+        background: $beigelight;
+        &:focus {
+          outline: none;
+        }
+      }
+      textarea {
+        resize: vertical;
+      }
+      input[type="submit"] {
+        @include menulink;
+        @include centerme;
+        width: 100%;
+        margin: 0 auto;
+        background-color: $sabledore;
+        color: $marron;
+        border-radius: 5px;
+        transition: 1s;
+        &:hover {
+          background-color: $bleuturquoise;
+          color: $sabledore;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
   }
 }

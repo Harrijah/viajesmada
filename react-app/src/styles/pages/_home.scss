@@ -2,10 +2,10 @@
   position: relative;
   display: block;
   width: 100%;
-  background: url("http://localhost:8080/uploads/allee-des-baobabs.jpg"),
+  background: url("https://tours.viajes-madagascar.mg/uploads/allee-des-baobabs.jpg"),
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
   background-blend-mode: overlay;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   #ppltitle {
@@ -29,23 +29,50 @@
         h1 {
           @include title01;
           margin-top: 100px;
+          font-size: 4rem;
+          @media screen and (max-width: 615px) {
+            font-size: 3rem;
+          }
+          @media screen and (max-width: 400px) {
+            font-size: 2rem;
+          }
           &:after {
             top: 55px;
             @include titleafter(50%, 150px, $beigelight);
+            @media screen and (max-width: 400px) {
+              top: 80px;
+            }
           }
           &:before {
             top: 57px;
-            @include titleafter(50.1%, 150px, $bleuturquoise);
+            @include titleafter(50.4%, 150px, $bleuturquoise);
+            @media screen and (max-width: 400px) {
+              top: 81px;
+            }
           }
           span {
             font-weight: bold;
             color: $beigelight;
+            font-size: 4rem;
+            font-family: dancing-script;
+            @media screen and (max-width: 615px) {
+              font-size: 3rem;
+            }
+            @media screen and (max-width: 400px) {
+              font-size: 2rem;
+            }
           }
         }
         h2 {
           position: relative;
           color: $beigelight;
           margin-bottom: 30px;
+          font-family: nunito;
+          font-size: 1.2rem;
+          @media screen and (max-width: 400px) {
+            margin-top: 50px;
+            max-width: 80%;
+          }
         }
       }
 
@@ -100,6 +127,98 @@
   display: block;
   width: 100%;
 
+  #textbann {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 60px;
+    @media screen and (max-width: 719px) {
+      margin-bottom: 30px;
+    }
+    .internbann {
+      position: relative;
+      display: flex;
+      width: 100%;
+      // box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      @media screen and (max-width: 719px) {
+        display: block;
+      }
+      .leftpart {
+        position: inherit;
+        display: block;
+        width: 50%;
+        min-height: 325px;
+        background: url("https://tours.viajes-madagascar.mg/static/414473988_1825631821201745_790118546279409083_n.jpg")
+          top/cover;
+        @media screen and (max-width: 719px) {
+          width: 100%;
+          height: 300px;
+          background-attachment: fixed;
+        }
+        p {
+          position: absolute;
+          color: $sablechaud;
+          text-align: center;
+          font-family: dancing-script;
+          font-size: 2rem;
+          // font-style: italic;
+          bottom: 0;
+          margin: 0 auto 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          @media screen and (max-width: 750px) {
+            font-size: 1.5rem;
+            bottom: 20%;
+          }
+          @media screen and (max-width: 460px) {
+            font-size: 1.5rem;
+            bottom: 20%;
+          }
+        }
+      }
+      .rightpart {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 50%;
+        background: $blanc;
+        @media screen and (max-width: 750px) {
+          width: 100%;
+          // height: 700px;
+        }
+        div {
+          @media screen and (max-width: 750px) {
+            width: 100%;
+            margin-top: 20px;
+          }
+          h2 {
+            position: relative;
+            text-align: center;
+            color: $sabledore;
+            transition: 1s;
+            margin-bottom: 20px;
+            &::after {
+              @include titleafter(50%, 100px, $sabledore);
+            }
+            // @include title02;
+            // @media screen and (max-width: 317px){
+            //   line-height: 30px;
+            //   &:before{
+            //     top: 70px;
+            //   }
+            //   &:after{
+            //     top: 71px;
+            //   }
+            // }
+          }
+          p {
+            @include paragraphe(80%, center);
+          }
+        }
+      }
+    }
+  }
+
   #whattosee {
     position: relative;
     text-align: center;
@@ -108,7 +227,7 @@
     justify-content: center;
     width: 100%;
     height: auto;
-    background: url("http://localhost:8080/static/Diapo-accueil-6.jpg"),
+    background: url("https://tours.viajes-madagascar.mg/static/Diapo-accueil-6.jpg"),
       linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
     background-blend-mode: overlay;
     background-position: top;
@@ -126,6 +245,17 @@
       // margin: auto;
       h2 {
         @include title01;
+        @media screen and (max-width: 500px) {
+          font-size: 2rem;
+        }
+        @media screen and (max-width: 317px) {
+          &:before {
+            top: 80px;
+          }
+          &:after {
+            top: 81px;
+          }
+        }
       }
       .regioncontainer {
         position: relative;
@@ -140,10 +270,19 @@
           width: 40%;
           height: auto;
           background: $beigelight;
-          border: solid 3px $bleuturquoise;
+          border: solid 2px $bleuturquoise;
           border-radius: 10px;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
           margin: 10px;
+          @media screen and (max-width: 1000px) {
+            width: 47%;
+          }
+          @media screen and (max-width: 770px) {
+            width: 75%;
+          }
+          @media screen and (max-width: 500px) {
+            width: 95%;
+          }
           .insidetext {
             display: flex;
             height: 100%;
@@ -170,23 +309,26 @@
                 @include title02;
               }
               p {
-                @include paragraphe(90%, left);
+                @include paragraphe(93%, left);
               }
               button {
                 @include button01;
+                @media screen and (max-width: 400px) {
+                  width: 90%;
+                }
               }
             }
           }
         }
         .norte {
           // grid-area: norte;
-          // background: url("http://localhost:8080/static/Diapo-accueil-5.jpg")
+          // background: url("https://tours.viajes-madagascar.mg/static/Diapo-accueil-5.jpg")
           //   center/cover;
           // margin-left: 50px;
           // margin-bottom: -20px;
           backdrop-filter: blur(10px);
           .imgctnr {
-            background: url("http://localhost:8080/static/Diapo-accueil-5.jpg")
+            background: url("https://tours.viajes-madagascar.mg/static/Diapo-accueil-5.jpg")
               center/cover;
           }
 
@@ -196,13 +338,13 @@
         }
         .surecentro {
           // grid-area: sur;
-          // background: url("http://localhost:8080/static/38498895_188775038491771_5934567659633901568_n-300x231.jpg")
+          // background: url("https://tours.viajes-madagascar.mg/static/38498895_188775038491771_5934567659633901568_n-300x231.jpg")
           //   center/cover;
           // margin-left: -50px;
           // margin-bottom: -50px;
           backdrop-filter: blur(10px);
           .imgctnr {
-            background: url("http://localhost:8080/static/hira-gasy-26055670.webp")
+            background: url("https://tours.viajes-madagascar.mg/static/hira-gasy-26055670.webp")
               center/cover;
           }
 
@@ -212,12 +354,12 @@
         }
         .este {
           // grid-area: este;
-          // background: url("http://localhost:8080/static/Diapo-5-2.jpg")
+          // background: url("https://tours.viajes-madagascar.mg/static/Diapo-5-2.jpg")
           //   center/cover;
           // margin-bottom: 40px;
           backdrop-filter: blur(10px);
           .imgctnr {
-            background: url("http://localhost:8080/static/37651996_1897036300335333_4758647992431411200_n.jpg")
+            background: url("https://tours.viajes-madagascar.mg/static/37651996_1897036300335333_4758647992431411200_n.jpg")
               center/cover;
           }
 
@@ -227,12 +369,12 @@
         }
         .oeste {
           // grid-area: oeste;
-          // background: url("http://localhost:8080/static/Diapo-Ouest-3.jpg")
+          // background: url("https://tours.viajes-madagascar.mg/static/Diapo-Ouest-3.jpg")
           //   center/cover;
           // margin-left: -50px;
           backdrop-filter: blur(10px);
           .imgctnr {
-            background: url("http://localhost:8080/static/37661125_1897037073668589_5257889789713055744_n.jpg")
+            background: url("https://tours.viajes-madagascar.mg/static/37661125_1897037073668589_5257889789713055744_n.jpg")
               center/cover;
           }
 
@@ -244,69 +386,88 @@
     }
   }
 
-  #thematicsbanner{
+  #thematicsbanner {
     position: relative;
     display: block;
-    .thematicscontainer{
+    .thematicscontainer {
       position: relative;
       display: block;
-      h2{
+      h2 {
         @include title02;
         margin-top: 40px;
       }
-      p{
-        @include paragraphe(70%, center);
+      p {
+        @include paragraphe(60%, center);
+        @media screen and (max-width: 700px) {
+          width: 80%;
+        }
       }
-      .thematicsgrid{
+      .thematicsgrid {
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto  auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
         grid-template-areas:
-        "a3 a3 a1 a2 a2 a2"
-        "a3 a3 b3 a2 a2 a2"
-        "a3 a3 a5 a5 a6 a6"
-        "a3 a3 a5 a5 a6 a6"
-        "a4 a4 a4 a4 a6 a6"
-        "a4 a4 a4 a4 a6 a6"
-        ;
+          "a3 a3 a1 a2 a2 a2"
+          "a3 a3 b3 a2 a2 a2"
+          "a3 a3 a5 a5 a6 a6"
+          "a3 a3 a5 a5 a6 a6"
+          "a4 a4 a4 a4 a6 a6"
+          "a4 a4 a4 a4 a6 a6";
         width: 80%;
         margin: 20px auto 80px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        border: solid 1px $sablechaud;
+        @media screen and (max-width: 700px) {
+          display: block;
+        }
 
-        .clasico, .naturaleza, .playas, .lunademiel, .aventura, .senderismo{
+        .clasico,
+        .naturaleza,
+        .playas,
+        .lunademiel,
+        .aventura,
+        .senderismo {
           display: flex;
           align-items: flex-end;
           bottom: 0;
           transition: 0.5s ease-in-out;
-          cursor: pointer;
-          &:hover > div > p {
+          @media screen and (max-width: 700px) {
+            max-height: 200px;
+          }
+          @media screen and (max-width: 350px) {
+            max-height: 250px;
+          }
+          &:hover > a > p {
             display: block;
             top: 0;
+            margin: 20px auto 10px;
           }
-          &:hover > div > h3 {
+          &:hover > a > h3 {
             // display: block;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
           }
-          div{
+          a {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             width: 100%;
+            text-decoration: none;
             // backdrop-filter: blur(2px);
             background: rgba(0, 0, 0, 0.4);
             // margin: auto;
+            cursor: pointer;
             margin-top: auto;
             transition: 0.5s ease-in-out;
             overflow: hidden;
-            h3{
+            h3 {
               @include title02;
               font-size: 1.2rem;
               margin-bottom: -40px;
               transition: 0.5 ease-in-out;
             }
-            p{
+            p {
               position: relative;
               // display: none;
               top: 150px;
@@ -316,91 +477,49 @@
             }
           }
         }
-        .clasico{
+        .clasico {
           position: relative;
           grid-area: a1;
-          background: url('http://localhost:8080/static/Morondava-3.jpg') center/cover;
+          background: url("https://tours.viajes-madagascar.mg/static/Morondava-3.jpg")
+            center/cover;
           height: 160px;
         }
-        .naturaleza{
+        .naturaleza {
           position: relative;
           grid-area: a2;
-          background: url('http://localhost:8080/static/indri-fiche-animaux-lemuriens-o2c04iu6eiasdjcj2bx573a31josju.jpg') top/cover;
+          background: url("https://tours.viajes-madagascar.mg/static/indri-fiche-animaux-lemuriens-o2c04iu6eiasdjcj2bx573a31josju.jpg")
+            top/cover;
           height: 160px;
         }
-        .playas{
+        .playas {
           position: relative;
           grid-area: a3;
-          background: url('http://localhost:8080/static/plage-ile-sainte-marie-ravoraha.jpg') center/cover;
+          background: url("https://tours.viajes-madagascar.mg/static/plage-ile-sainte-marie-ravoraha.jpg")
+            center/cover;
           height: 320px;
         }
-        .lunademiel{
+        .lunademiel {
           position: relative;
           grid-area: a4;
-          background: url('http://localhost:8080/static/Tsara-Komba-5.jpg') center/cover;
+          background: url("https://tours.viajes-madagascar.mg/static/Tsara-Komba-5.jpg")
+            center/cover;
           height: 160px;
         }
-        .aventura{
+        .aventura {
           position: relative;
           grid-area: a5;
-          background: url('http://localhost:8080/static/Visita-de-los-parques-o1ic996itcd37kc8r0lxq469u1nxf1uemicveh.jpg') center/cover;
+          background: url("https://tours.viajes-madagascar.mg/static/Visita-de-los-parques-o1ic996itcd37kc8r0lxq469u1nxf1uemicveh.jpg")
+            center/cover;
           height: 160px;
         }
-        .senderismo{
+        .senderismo {
           position: relative;
           grid-area: a6;
-          background: url('http://localhost:8080/static/isalo-5-nz7oiynemsjmhn99235jk29ajdiwerw04la3sb48mw.jpg') center/cover;
+          background: url("https://tours.viajes-madagascar.mg/static/isalo-5-nz7oiynemsjmhn99235jk29ajdiwerw04la3sb48mw.jpg")
+            center/cover;
           height: 320px;
         }
       }
     }
-
   }
-
-  #textbann{
-    position: relative;
-    display: block;
-    width: 100%;
-    .internbann{
-      position: relative;
-      display: flex;
-      width: 100%;
-      height: 400px;
-      // box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      .leftpart{
-        position: inherit;
-        display: block;
-        width: 50%;
-        background: url('http://localhost:8080/static/414473988_1825631821201745_790118546279409083_n.jpg') center/cover;
-        p{
-          position: absolute;
-          color: $sablechaud;
-          text-align: center;
-          font-size: 2rem;
-          font-style: italic;
-          bottom: 0;
-          margin: 0 auto 20px;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
-      .rightpart{
-        position: relative;
-        display: flex;
-        align-items: center;
-        width: 50%;
-        background: $blanc;
-        div{
-          h2{
-            @include title02;
-          }
-          p{
-            @include paragraphe(80%, center);
-          }
-        }
-      }
-
-    }
-  }
-
 }

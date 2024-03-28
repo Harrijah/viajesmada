@@ -5,10 +5,20 @@ import { combineReducers } from "redux";
 import tourReducer from "./tour.reducer";
 import oneTourReducer from "./onetour.reducer";
 import menuReducer from "./menu.reducer";
+import cityReducer from "./city.reducer";
+import activityReducer from "./activity.reducer";
+import itineraryReducer from "./itinerary.reducer";
+import citydetailsReducer from "./citydetails.reducer";
+import picsReducer from "./pics.reducer";
 
 // On combine les reducers
 export default combineReducers({
     tourReducer,
     oneTourReducer,
     menuReducer,
+    cityReducer,
+    activityReducer,
+    itineraryReducer,
+    citydetailsReducer,
+    picsReducer,
 });

@@ -9,25 +9,51 @@
     justify-content: center;
     h2 {
       @include title02;
-      margin: 40px auto 20px;
+      margin: 40px auto 40px;
+      max-width: 80%;
+      @media screen and (max-width: 725px) {
+        line-height: 1.5rem;
+        &:after {
+          top: 3.4rem;
+        }
+      }
+      @media screen and (max-width: 369px) {
+        &:after {
+          top: 5.2rem;
+        }
+      }
+    }
+    p {
+      display: block;
+      width: 50%;
+      text-align: center;
+      margin: 0 auto;
+      @media screen and (max-width: 750px) {
+        width: 80%;
+      }
     }
     .insideactivities {
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: center;
+      // justify-content: center;
       .bouton01,
       .bouton02 {
         display: block;
         position: relative;
-        width: 10%;
-        text-align: center;
+        width: 15%;
+        @media screen and (max-width: 900px) {
+          width: 5%;
+        }
         button {
-          font-size: 3rem;
+          font-size: 3.5rem;
           border: none;
           background-color: $beigelight;
           text-decoration: none;
           cursor: pointer;
+          @media screen and (max-width: 800px) {
+            font-size: 2.5rem;
+          }
           i {
             color: $bleuturquoise;
             transition: 0.3s;
@@ -38,53 +64,182 @@
           }
         }
       }
+      .bouton01 {
+        text-align: right;
+      }
+      .bouton02 {
+        text-align: left;
+      }
       .persocarousel {
         position: relative;
         display: block;
-        width: 80%;
+        width: 66%;
         margin: auto;
+        @media screen and (max-width: 900px) {
+          width: 89%;
+        }
+
         .slide {
           display: flex;
           align-items: center;
           justify-content: center;
+          margin-top: 40px;
+          @media screen and (max-width: 645px) {
+            display: block;
+          }
           .leftpart {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 400px;
-            width: 40%;
+            width: 50%;
             text-align: right;
+            min-height: 325px;
+            height: auto;
+            left: 20px;
+            z-index: 1;
+            background: $beigelight;
+            border-radius: 10px 0 0 10px;
+            box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
+            @media screen and (max-width: 645px) {
+              width: 80%;
+              margin: auto;
+              left: 0;
+              min-height: 250px;
+            }
+            @media screen and (max-width: 575px) {
+              width: 90%;
+              margin: auto;
+              left: 0;
+            }
+
             div {
-              display: block;
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              position: relative;
+              // transition: 1s ease-in-out;
+
               h3 {
-                @include title02;
-                font-size: 1.5rem;
+                padding-top: 20px;
+                // @include title02;
+                // font-size: 1.5rem;
+                // @media screen and (max-width: 700px) {
+                //   font-size: 1.2rem;
+                // }
+                position: relative;
+                text-align: center;
+                color: $sabledore;
+                transition: 1s;
+                margin-bottom: 20px;
+                &::after {
+                  @include titleafter(50%, 100px, $sabledore);
+                }
               }
               p {
                 @include paragraphe(80%, center);
+                margin: 0 auto;
+              }
+            }
+            .txtdrop {
+              animation: hidetext 1s ease-in-out;
+              opacity: 1;
+            }
+            .showtext {
+              animation: hidetext-return 1s ease-in-out;
+              opacity: 0;
+            }
+            @keyframes hidetext {
+              from {
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+              }
+            }
+            @keyframes hidetext-return {
+              from {
+                opacity: 1;
+              }
+              to {
+                opacity: 0;
               }
             }
           }
           .rightpart {
             position: relative;
             display: block;
-            width: 40%;
+            align-items: center;
+            width: 50%;
             overflow: hidden;
             border-radius: 10px;
-            // box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            height: 350px;
+            z-index: -1;
+            @media screen and (max-width: 645px) {
+              width: 80%;
+              margin: auto;
+              height: auto;
+            }
             img {
-              width: auto;
-              // max-width: 400px;
-              height: 300px;
-              text-align: center;
+              position: relative;
+              display: block;
+              align-items: center;
+              width: 95%;
+              min-height: 250px;
+              border: solid 2px $sabledore;
               border-radius: 10px;
               box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+              z-index: -1;
+              // transition: 1s ease-in-out 1s 1 alternate both !important;
+            }
+
+            .imgslide {
+              @media screen and (max-width: 645px) {
+                margin: auto;
+                left: 0%;
+                animation: showimage ease-in 1s forwards  !important;
+              }
+              @media screen and (min-width: 646px){
+                left: 0%;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            }
+            .return {
+              @media screen and (max-width: 645px) {
+                margin: auto;
+                left: 0%;
+                animation: testimage-return ease-in 1s forwards !important;
+              }
+              @media screen and (min-width: 646px){
+                left: -100%;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            }
+
+            @keyframes showimage {
+              from {
+                top: -100%;
+              }
+              to {
+                top: 0%;
+              }
+            }
+
+            @keyframes testimage-return {
+              from {
+                top: 0%;
+              }
+              to {
+                top: -100%;
+              }
             }
           }
         }
+
         .diapoinactive {
-          display: none;
+          display: none !important;
         }
       }
     }

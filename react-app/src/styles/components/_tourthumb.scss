@@ -9,11 +9,29 @@
   height: fit-content;
   margin: 1% 1%;
   padding: 0;
-  background-color: $neutre;
+  background: $neutre;
   // border: solid 2px $sabledore;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
+  // @media screen and (max-width: 800px) {
+  //   width: 290px;
+  //   // height: 700px;
+  // }
+  // @media screen and (max-width: 670px) {
+  //   width: 250px;
+  //   // height: 700px;
+  // }
+  @media screen and (max-width: 580px) {
+    margin: 5px;
+    width: 290px;
+    // height: 700px;
+  }
+  @media screen and (max-width: 470px) {
+    margin: 5px;
+    width: 300px;
+    // height: 700px;
+  }
   &:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   }
@@ -38,33 +56,42 @@
     }
     h3 {
       text-align: center;
+      margin: 5px 0;
     }
   }
   .tourinfos {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: auto;
+    height: 125px;
     align-items: top;
     padding: 5px 10px;
+    background: $beigelight;
     .tourcolone {
       width: 65%;
+      background: $beigelight;
       text-align: left !important;
+      // @media screen and (max-width: 580px) {
+      //   width: 55%;
+      // }
+      @media screen and (max-width: 470px) {
+        width: 65%;
+      }
       p,
       span {
         background: $neutre;
         text-align: left !important;
+        background: $beigelight;
       }
-      background: $neutre;
       p {
         font-weight: bold;
-        text-align: left  !important;
+        text-align: left !important;
       }
       span {
         font-weight: 400;
         .difficultyclass {
           width: 30px;
-          background-color: $neutre;
+          background: $beigelight;
         }
       }
     }
@@ -72,29 +99,66 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 35%;
-      padding: 5px;
-      border: solid 1px $sabledore;
-      border-radius: 5px;
+      width: 30%;
+      height: 85px;
+      // padding: 5px;
+      border: solid 1px $bleuturquoise;
+      border-radius: 250px;
       text-align: center;
+      background: $bleuturquoise;
+      // @media screen and (max-width: 580px) {
+      //   width: 45%;
+      // }
+      @media screen and (max-width: 470px) {
+        width: 30%;
+      }
       div {
         p {
           font-weight: 400;
+          color: $beigenaturel;
+          @media screen and (max-width: 580px) {
+            font-size: 0.75rem;
+          }
+          @media screen and (max-width: 470px) {
+            font-size: 1rem;
+          }
+          @media screen and (max-width: 340px) {
+            font-size: 0.75rem;
+          }
         }
         span {
           font-weight: 400;
+          color: $beigenaturel;
         }
         .daynumber {
           font-size: 1rem;
           // font-weight: 600;
-          color: $sabledore;
+          color: $beigelight;
           margin-bottom: 0.5rem;
+          @media screen and (max-width: 580px) {
+            font-size: 0.75rem;
+          }
+          @media screen and (max-width: 470px) {
+            font-size: 1rem;
+          }
+          @media screen and (max-width: 340px) {
+            font-size: 0.75rem;
+          }
         }
         .tourprice {
           font-size: 1rem;
           // font-weight: 400;
-          color: $sabledore;
+          color: $beigelight;
           margin-bottom: 0.5rem;
+          @media screen and (max-width: 580px) {
+            font-size: 0.75rem;
+          }
+          @media screen and (max-width: 470px) {
+            font-size: 1rem;
+          }
+          @media screen and (max-width: 340px) {
+            font-size: 0.75rem;
+          }
         }
       }
     }
@@ -106,18 +170,18 @@
     width: 100%;
     padding: 0.5rem;
     border-radius: 0 0 5px 5px;
-    background-color: $bleuturquoise;
-    border: 1px solid $bleuturquoise;
-    color: $sabledore;
+    background: linear-gradient(35deg, $sabledore, $sablechaud);
+    // border: 1px solid $sablechaud;
+    color: $blanc;
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     &:hover {
-      background-color: $neutre;
-      color: $bleuturquoise;
-      border: 1px solid $bleuturquoise;
+      background: linear-gradient(35deg, $bleuturquoise, $bleuturquoiselight);
+      color: $beigelight;
+      // border: 1px solid $bleuturquoiselight;
     }
   }
 }

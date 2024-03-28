@@ -1,40 +1,57 @@
 // Palette de couleurs Sable et Mer
-$marron: #562b05; // Marron
-$neutre: #fff;
-$beigelight: #fdfaf7; // Beige Jaune très clair
-
-$bleuocean: #0077cc; // Bleu Océan
 $sablechaud: #e6d7b1; // Sable Chaud
+$bleuturquoise: #00a7a7; // Bleu Turquoise
+$bleuturquoisesombre: #005959; // Bleu Turquoise
+$bleuturquoiselight: #00d4d4; // Bleu Turquoise
 $blanc: #ffffff; // Blanc éclatant
-$bleuclair: #a2c8e0; // Bleu Clair pour les accents
 $beigenaturel: #dac292; // Beige Naturel
+$sabledore: #d2b48c; // Sable Doré
+$beigelight: #fdfaf7; // Beige Jaune très clair
+$neutre: #fff;
+$blancnacre: #f4f4f4; // Blanc Nacré
+$gris01: #293333;
+$gris02: #293333;
+$gris03: #293333;
+
+$bleuclair: #a2c8e0; // Bleu Clair pour les accents
 
 // Palette de couleurs Ambiance Plage :
-
-$bleuturquoise: #00a7a7; // Bleu Turquoise
-$sabledore: #d2b48c; // Sable Doré
-$blancnacre: #f4f4f4; // Blanc Nacré
+$marron3: #562b0561; // Marron
+$marron2: #562b0582; // Marron
+$marron: #562b05; // Marron
+$bleuocean: #0077cc; // Bleu Océan
 $vertdeau: #82c8a0; // Vert d'Eau
 $grisperle: #dcdcdc; // Gris Perle
+$vert: #228B22;
+$grey : rgba(128, 128, 128, 0.463);
+
+@font-face {
+  font-family: nunito;
+  src: url("../../public/fonts/Nunito-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: dancing-script;
+  src: url("../../public/fonts/DancingScript-VariableFont_wght.ttf");
+}
 
 @mixin navactive {
   color: $beigelight;
   background-color: $sabledore;
   border: solid 2px $beigelight;
-  border-top: none;
+  // border-top: none;
 }
 
 @mixin menulink {
   text-decoration: none;
   text-align: center;
-  padding: 15px 10px;
+  padding: 10px 10px;
   color: $marron;
-  height: 50px;
+  min-height: 50px;
   width: 100%;
   transition: 1s;
   // border: solid 2px $beigelight;
   // border-radius: 0 0 5px 5px;
-  border-top: none;
+  // border-top: none;
 }
 
 @mixin menuli {
@@ -144,33 +161,139 @@ $grisperle: #dcdcdc; // Gris Perle
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: calibri;
+  font-family: nunito;
   color: $marron;
-  transition: 0.5s;
+  transition: 1s;
+  h1 {
+    font-family: dancing-script;
+  }
+  h2 {
+    font-family: dancing-script;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.87rem;
+  }
 }
 body {
   background-color: $beigelight;
+  &::-moz-selection {
+    background: $bleuturquoise;
+    color: $beigelight;
+  }
+  &:selection {
+    background: $bleuturquoise;
+    color: $beigelight;
+  }
   .logomenu {
     height: 50px;
   }
   .contactbann {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
     .insidecontact {
       position: relative;
       display: flex;
-      align-items: center;
-      width: 75%;
-      background: $beigelight;
-      margin: 40px auto;
+      align-items: flex-end;
+      width: 100%;
+      // border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+
       .principcontact {
+        display: block;
+        position: relative;
+        width: 50%;
+        height: auto;
+        border-radius: 10px;
+        background: linear-gradient(25deg, $sabledore, $sablechaud);
+        margin: 40px auto;
+        padding: 20px 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        // border-radius: 60% 3% 60% 3% / 10% 30% 10% 30%;
+        @media screen and (max-width: 1000px){
+          width: 70%;
+        }
+
         h2 {
           @include title02;
+          color: $beigelight;
+          margin-bottom: 50px;
+          @media screen and (max-width: 365px){
+            font-size: 1.3rem;
+          }
         }
         p {
           @include paragraphe(80%, center);
         }
-        button{
+        a {
           @include button01;
+          color: $beigelight;
+          margin-top: 20px;
+          max-width: 150px;
+          @media screen and (max-width: 365px){
+            font-size: 0.7rem;
+          }
         }
+      }
+    }
+  }
+  .imageafter {
+    display: block;
+    width: 300px;
+    @media screen and (max-width: 1000px){
+      width: 20%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .imageafter02 {
+    display: block;
+    position: absolute;
+    width: 300px;
+    width: 25%;
+    @media screen and (max-width: 1000px){
+      width: 20%;
+    }
+    img {
+      width: 100%;
+      max-height: 350px;
+    }
+  }
+  .entreeobj {
+    display: flex;
+    h2 {
+      text-align: center;
+    }
+    .form01,
+    .form02 {
+      width: 33%;
+      padding: 0 20px;
+      input,
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 0 10px;
+      }
+      .description {
+        height: 100px;
+      }
+    }
+    .form03 {
+      input {
+        // display: block;
+        width: 100%;
+        padding: 0 5px;
+      }
+      input[type="checkbox"] {
+        display: inline-block;
+        margin: 0 10px;
+        width: 50px;
       }
     }
   }

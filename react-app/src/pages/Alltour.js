@@ -4,29 +4,37 @@ import Tour from "../components/Tour";
 import { useSelector } from "react-redux";
 import { isEmpty } from "../components/Utils";
 import Footer from "../components/Footer";
+import TourSearch from "../components/TourSearch";
+import Contactbann from "../components/Contactbann";
+import Spots from "../components/Spots";
 
+// CSS : _tour.css
 const Alltour = () => {
   const tours = useSelector((state) => state.tourReducer);
 
   return (
+
     <div>
       <Navigation />
       <div id="tourlistcontainer">
-        <h1>Tous les circuits</h1>
+        <div className="randomimage">
+
+        </div>
+        <h1>Todos los circuitos</h1>
         <div id="tourintrocontainer">
           <p>
-            Madagascar es un destino turístico completo que conviene a todos los gustos. Aventura, balneario, naturaleza, cultura, … todos los argumentos se reúnen para que disfruta de todo lo que ofrece la gran isla desde el norte hasta el sur.
-            Póngase en contacto con nuestro agente de viajes local para preparar
-            su propia excursión a medida en Madagascar. Le proporcionamos toda
-            la información necesaria y un presupuesto gratuito según la duración
-            de su estadía y el presupuesto de su viaje.
+          Nuestra agencia de viajes se complace en darle la bienvenida y ayudarle a preparar para su próxima estancia en Madagascar. Ofrecemos paquetes al mejor precio, dependiendo de la elección de su viaje o del tema de su viaje. Ofrecemos tours clásicos, que siempre hacen nuestras mejores ventas en Madagascar, pero también viajes a medida y rutas combinadas, según la duración de sus vacaciones, su presupuesto y sus intereses
           </p>
         </div>
-        <div id="insidecontainer">
+        <TourSearch />
+        {/* <div id="insidecontainer">
           {!isEmpty(tours) &&
             tours.map((tour) => <Tour tour={tour} key={tour.id} />)}
-        </div>
+        </div> */}
       </div>
+      
+      <Spots />
+      <Contactbann />
       <Footer />
     </div>
   );

@@ -7,7 +7,7 @@ export const GET_ONETOUR = 'GET_ONETOUR';
 // Cette fonction permet de récupérer les tours
 export const getAllTours = () => {
     return (dispatch) => {
-        return axios.get('http://localhost:8080/affichercircuit').then((res) => {
+        return axios.get('https://tours.viajes-madagascar.mg/affichercircuit').then((res) => {
             dispatch({ type: GET_ALLTOURS, payload: res.data });
         });
     }
@@ -15,7 +15,7 @@ export const getAllTours = () => {
 
 export const getOneTour = (id) => {
     return (dispatch) => {
-        return axios.get('http://localhost:8080/affichercircuitbyid/' + id).then((res) => {
+        return axios.get('https://tours.viajes-madagascar.mg/affichercircuitbyid/' + id).then((res) => {
             dispatch({ type: GET_ONETOUR, payload: res.data });
         });
     }

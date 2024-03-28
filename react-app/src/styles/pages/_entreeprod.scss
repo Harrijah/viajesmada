@@ -19,7 +19,7 @@
             @include myinputs;
         }
         display: grid;
-        grid-template-rows:  auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-template-rows:  auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
         "a1 a1 a2 a3 a4 a5"
@@ -46,9 +46,9 @@
         "u1 u1 u1 u2 u2 u2"
         "v1 v1 v1 v2 v2 v2"
         "x1 x1 x1 x2 x2 x2"
-        "desc17 desc17 desc17 desc18 desc18 desc18"
+
         "z1 z1 z1 z2 z2 z2"
-        "desc19 desc19 desc19 desc20 desc20 desc20"
+
         "w1 w2 w2 w2 w2 w3"
         ;
         
@@ -193,145 +193,88 @@
         #x0{
             grid-area: x0;
         }
-        #jour01title{
+        #jour1{
             grid-area: g1;
             margin-top: 10px;
         }
-        #jour01desc{
-            grid-area: h1;
-        }
-        #jour02title{
+        #jour2{
             grid-area: g2;
             margin-top: 10px;
         }
-        #jour02desc{
-            grid-area: h2;
-        }
-        #jour03title{
+        #jour3{
             grid-area: i1;
             margin-top: 10px;
         }
-        #jour03desc{
-            grid-area: j1;
-        }
-        #jour04title{
+        #jour4{
             grid-area: i2;
             margin-top: 10px;
         }
-        #jour04desc{
-            grid-area: j2;
-        }
-        #jour05title{
+        #jour5{
             grid-area: k1;
             margin-top: 10px;
         }
-        #jour05desc{
-            grid-area: l1;
-        }
-        #jour06title{
+        #jour6{
             grid-area: k2;
             margin-top: 10px;
         }
-        #jour06desc{
-            grid-area: l2;
-        }
-        #jour07title{
+        #jour7{
             grid-area: m1;
             margin-top: 10px;
         }
-        #jour07desc{
-            grid-area: n1;
-        }
-        #jour08title{
+        #jour8{
             grid-area: m2;
             margin-top: 10px;
         }
-        #jour08desc{
-            grid-area: n2;
-        }
-        #jour09title{
+        #jour9{
             grid-area: o1;
             margin-top: 10px;
         }
-        #jour09desc{
-            grid-area: p1;
-        }
-        #jour10title{
+        #jour10{
             grid-area: o2;
             margin-top: 10px;
         }
-        #jour10desc{
-            grid-area: p2;
-        }
-        #jour11title{
+        #jour11{
             grid-area: q1;
             margin-top: 10px;
         }
-        #jour11desc{
-            grid-area: r1;
-        }
-        #jour12title{
+        #jour12{
             grid-area: q2;
             margin-top: 10px;
         }
         #jour12desc{
             grid-area: r2;
         }
-        #jour13title{
+        #jour13{
             grid-area: s1;
             margin-top: 10px;
         }
-        #jour13desc{
-            grid-area: t1;
-        }
-        #jour14title{
+        #jour14{
             grid-area: s2;
             margin-top: 10px;
         }
-        #jour14desc{
-            grid-area: t2;
-        }
-        #jour15title{
+        #jour15{
             grid-area: u1;
             margin-top: 10px;
         }
-        #jour15desc{
-            grid-area: v1;
-        }
-        #jour16title{
+        #jour16{
             grid-area: u2;
             margin-top: 10px;
         }
-        #jour16desc{
-            grid-area: v2;
-        }
-        #jour17title{
+        #jour17{
             grid-area: x1;
             margin-top: 10px;
         }
-        #jour17desc{
-            grid-area: desc17;
-        }
-        #jour18title{
+        #jour18{
             grid-area: x2;
             margin-top: 10px;
         }
-        #jour18desc{
-            grid-area: desc18;
-        }
-        #jour19title{
+        #jour19{
             grid-area: z1;
             margin-top: 10px;
         }
-        #jour19desc{
-            grid-area: desc19;
-        }
-        #jour20title{
+        #jour20{
             grid-area: z2;
             margin-top: 10px;
-        }
-        #jour20desc{
-            grid-area: desc20;
         }
 
 

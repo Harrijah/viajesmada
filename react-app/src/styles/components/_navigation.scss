@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   #navigation {
     position: relative;
     display: flex;
@@ -13,12 +13,20 @@
     padding: 0 10%;
     position: relative;
     z-index: 2;
-    // background-color: $beigelight;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.3);
+    @media screen and (max-width: 940px) {
+      padding: 0 5%;
+    }
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
     ul {
       display: flex;
       // position: relative;
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
       .menu01 {
         // position: relative;
         display: flex;
@@ -33,15 +41,15 @@
           color: $beigelight;
           background-color: $bleuturquoise;
           border: solid 3px $sabledore;
-          border-top: none;
-          border-radius: 0 0 10px 10px;
+          // border-top: none;
+          border-radius: 0 0 0px 0px;
         }
       }
       .menu02 {
         @include menuli;
         display: flex;
         flex-direction: column;
-        transition: 1s;
+        transition: 10s;
         &:hover .sousmenu01 {
           display: flex;
         }
@@ -58,14 +66,15 @@
           color: $beigelight;
           background-color: $bleuturquoise;
           border: solid 3px $sabledore;
-          border-top: none;
-          border-radius: 0 0 10px 10px;
+          // border-top: none;
+          border-radius: 0 0 0px 0px;
         }
         .sousmenu01 {
           display: none;
           flex-direction: column;
           @include menuli;
           transition: 1s;
+          font-size: 0.83rem;
           .sousmenu02 {
             display: flex;
             @include menuli;
@@ -86,15 +95,335 @@
               display: none;
               flex-direction: column;
               @include menuli;
+              font-size: 0.83rem;
               .sousmenu04 {
                 display: flex;
                 flex-direction: column;
                 @include menuli;
+                font-size: 0.83rem;
               }
             }
           }
         }
       }
     }
+  }
+  #mobilemenu {
+    // #navigation {
+    //   position: relative;
+    //   display: block;
+    //   align-content: center;
+    //   justify-content: space-between;
+    //   height: 50px;
+    //   padding: 0 10%;
+    //   position: relative;
+    //   z-index: 2;
+    //   backdrop-filter: blur(10px);
+    //   background-color: rgba(255, 255, 255, 0.3);
+    //   @media screen and (max-width: 940px) {
+    //     padding: 0 5%;
+    //   }
+    //   @media screen and (min-width: 800px) {
+    //     display: none;
+    //   }
+    //   a {
+    //     img {
+    //       transition: 1s;
+    //     }
+    //   }
+    //   &:hover a {
+    //     img {
+    //       display: none;
+    //     }
+    //   }
+    //   &:hover ul {
+    //     visibility: visible;
+    //   }
+    //   ul {
+    //     display: flex;
+    //     display: none;
+    //     // position: relative;
+    //     visibility: hidden;
+    //     @media screen and (max-width: 800px) {
+    //       display: block;
+    //     }
+
+    //     .menu01 {
+    //       // position: relative;
+    //       display: flex;
+    //       background: $beigelight;
+    //       @include menuli;
+    //       a {
+    //         @include menulink;
+    //         &:hover {
+    //           @include navactive;
+    //         }
+    //       }
+    //       .nav-active {
+    //         color: $beigelight;
+    //         background-color: $bleuturquoise;
+    //         border: solid 3px $sabledore;
+    //         // border-top: none;
+    //         // border-radius: 10px 10px 10px 10px;
+    //       }
+    //     }
+    //     .menu02 {
+    //       @include menuli;
+    //       display: flex;
+    //       flex-direction: column;
+    //       transition: 1s;
+    //       background: $beigelight;
+    //       &:hover .sousmenu01 {
+    //         display: flex;
+    //       }
+    //       // &:hover .sousmenu01 {
+    //       //   display: flex;
+    //       // }
+    //       &:hover a {
+    //         @include hovermenu;
+    //       }
+    //       a {
+    //         @include menulink;
+    //         &:hover {
+    //           @include navactive;
+    //         }
+    //       }
+    //       .nav-active {
+    //         color: $beigelight;
+    //         background-color: $bleuturquoise;
+    //         border: solid 3px $sabledore;
+    //         // border-top: none;
+    //         border-radius: 10px 10px 10px 10px;
+    //       }
+    //       .sousmenu01 {
+    //         display: none;
+    //         flex-direction: column;
+    //         @include menuli;
+    //         transition: 1s;
+    //         font-size: 0.83rem;
+    //         z-index: 2;
+    //         &:hover .sousmenu02 {
+    //           display: flex;
+    //         }
+
+    //         .sousmenu02 {
+    //           // display: none;
+    //           @include menuli;
+    //           position: relative;
+    //           left: -100%;
+    //           top: -100%;
+    //           // &:hover .sousmenu03 {
+    //           //   display: inline-block;
+    //           // }
+    //           .testo {
+    //             a {
+    //               @include menulink;
+    //               display: inline-block;
+    //               // width: 160px;
+    //               &:hover {
+    //                 @include navactive;
+    //               }
+    //             }
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+
+
+    #navigation {
+      position: relative;
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      height: 50px;
+      padding: 0 10%;
+      position: relative;
+      z-index: 2;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.3);
+      @media screen and (max-width: 940px) {
+        padding: 0 5%;
+      }
+      @media screen and (min-width: 800px) {
+        display: none;
+      }
+      a {
+        img {
+          transition: 1s;
+        }
+      }
+      &:hover ul {
+        visibility: visible;
+      }
+      #menumenu{
+        position: relative;
+        vertical-align: middle;
+        align-items: center;
+        width: 40px;
+        height: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        &:hover > .menubar > .bar01{
+          background: $sablechaud;
+        }
+        .menubar{
+          #bar01, #bar02, #bar03{
+            position: relative;
+            width: 100%;
+            height: 5px;
+            border-radius: 2px;
+            background: $sabledore;
+            margin: 3px auto;
+          }
+          .inversebar01{
+            top: 8px;
+            transform: rotate(45deg);
+          }
+          .inversebar02{
+            transform: perspective(200px) translateZ(-1000px);
+            // transform: rotate(45deg);
+          }
+          .inversebar03{
+            top: -8px;
+            transform: rotate(-45deg);
+          }
+        }
+        .hidemymenu{
+          visibility: hidden;
+        }
+        .showmymenu {
+          position: relative;
+          display: flex;
+          visibility: visible;
+          margin-top: 13px;
+          left: -120px;
+          @media screen and (max-width: 800px) {
+            display: block;
+          }
+          .menu01 {
+            // position: relative;
+            display: flex;
+            @include menuli;
+            background: $blancnacre;
+            a {
+              @include menulink;
+              &:hover {
+                @include navactive;
+              }
+            }
+            .nav-active {
+              color: $beigelight;
+              background-color: $bleuturquoise;
+              border: solid 3px $sabledore;
+              // border-top: none;
+              border-radius: 0 0 0 0;
+            }
+          }
+          .menu02 {
+            @include menuli;
+            display: flex;
+            align-content: space-between;
+            // flex-direction: column;
+            transition: 1s;
+            height: fit-content;
+            background: $blancnacre;
+            // &:hover .sousmenu01 {
+            //   display: flex;
+            // }
+            &:hover a {
+              @include hovermenu;
+            }
+            a {
+              @include menulink;
+              width: 100%;
+              display: inline-block;
+              &:hover {
+                @include navactive;
+                // width: 85%;
+              }
+            }
+            button{
+                width: 100%;
+                border-radius: 0;
+                background: $blancnacre;
+                border: none;
+                &:hover{
+                  background-color: $sablechaud;
+                }
+              i{
+                display: inline-block;
+                font-size: 0.4rem;
+                color: $marron;
+                margin: 0 2px 0;
+                border-radius: 50%;
+                z-index: 5;
+                cursor: pointer;
+                &:hover {
+                  color: $blanc;
+                }
+              }
+            }
+            .nav-active {
+              color: $beigelight;
+              background-color: $bleuturquoise;
+              border: solid 3px $sabledore;
+              // border-top: none;
+              border-radius: 0 0 0 0;
+            }
+            .hideme{
+              display: none;
+            }
+            .sousmenu01 {
+              display: flex;
+              flex-direction: column;
+              @include menuli;
+              transition: 1s;
+              font-size: 0.83rem;
+              height: fit-content;
+              .sousmenu02 {
+                display: flex;
+                @include menuli;
+                &:hover .sousmenu03 {
+                  display: inline-block;
+                }
+                .testo {
+                  a {
+                    @include menulink;
+                    display: inline-block;
+                    width: 160px;
+                    &:hover {
+                      @include navactive;
+                    }
+                  }
+                }
+                .sousmenu03 {
+                  display: none;
+                  flex-direction: column;
+                  @include menuli;
+                  font-size: 0.83rem;
+                  .sousmenu04 {
+                    display: flex;
+                    flex-direction: column;
+                    @include menuli;
+                    font-size: 0.83rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+
+
+
+
+
+
   }
 }

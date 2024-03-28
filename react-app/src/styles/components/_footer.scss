@@ -1,13 +1,17 @@
 #footercontainer {
+  position: relative;
   width: 100%;
   margin: auto;
-  background-color: $sabledore;
+  // background: linear-gradient(245deg, $sablechaud, $sabledore);
+  background: linear-gradient(225deg, $gris01, $gris01);
   .footerrs {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $bleuturquoise;
+    // z-index: -1;
     a {
       background-color: $bleuturquoise;
       .footerfa {
@@ -25,39 +29,85 @@
 
   .footergrid {
     display: grid;
-    grid-template-columns: 1FR 1FR 1FR;
+    grid-template-columns: 35% 25% auto;
     grid-template-rows: auto;
     grid-template-areas: "footer01 footer02 footer03";
     padding: 20px 10px;
     width: 80%;
     margin: auto;
-    background-color: $sabledore;
-    h3, h4, li{
+    @media screen and (max-width: 1000px) {
+      width: 90%;
+    }
+    @media screen and (max-width: 720px) {
+      grid-template-rows: auto auto;
+      grid-template-columns: 50% 50%;
+      grid-template-areas:
+        "footer01 footer02"
+        "footer03 footer03";
+      width: 90%;
+    }
+    @media screen and (max-width: 450px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 350px) {
+      grid-template-rows: auto auto auto;
+      grid-template-columns: 1FR;
+      grid-template-areas:
+        "footer01"
+        "footer02"
+        "footer03";
+      width: 100%;
+    }
+    h3,
+    h4,
+    li {
       text-align: center;
     }
-    h3, h4, ul, li, a, p, span{
-      background-color: $sabledore;
+    h3,
+    h4,
+    ul,
+    li,
+    a,
+    p,
+    span {
+      color: $blancnacre;
+      text-align: left;
     }
-    ul{
+    ul {
       list-style: none;
-      li{
-        a{
+      li {
+        a {
           text-decoration: none;
           transition: 0.5s;
-          &:hover{
+          color: $blanc;
+          text-align: left;
+          &:hover {
             color: $bleuturquoise;
           }
         }
       }
     }
-    .footertours{
-      background-color: $sabledore;
+    // .footertours, .footerdestinations, .footercontact{
+    //   background-color: $sablechaud;
+    // }
+    .footertours {
+      grid-area: footer01;
+      // @media screen and (max-width: 1000px) {
+      // }
     }
-    .footerdestinations{
-      background-color: $sabledore;
+    .footerdestinations {
+      grid-area: footer02;
+      @media screen and (max-width: 350px) {
+      margin-top: 25px;
+      }
+      // @media screen and (max-width: 1000px) {
+      // }
     }
-    .footercontact{
-      background-color: $sabledore;
+    .footercontact {
+      grid-area: footer03;
+      @media screen and (max-width: 720px) {
+      margin-top: 25px;
+      }
     }
   }
 }

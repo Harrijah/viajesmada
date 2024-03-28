@@ -109,13 +109,15 @@ class Circuit extends BaseController
         return redirect()->to('http://localhost:3000/');
     }
 
-    public function affichercircuit() {
+    public function affichercircuit() 
+    {
         $model = model(Circuitmodel::class);
         $data = $model->getcircuit();
         return $this->response->setHeader('Access-Control-Allow-Origin', '*')->setStatusCode(200)->setJSON($data);
     }
 
-    public function affichercircuitbyid($id) {
+    public function affichercircuitbyid($id) 
+    {
         $model = model(Circuitmodel::class);
         $data = $model->getcircuitbyid($id);
         return $this->response->setHeader('Access-Control-Allow-Origin', '*')->setStatusCode(200)->setJSON($data);

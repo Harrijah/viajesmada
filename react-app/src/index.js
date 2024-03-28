@@ -16,6 +16,10 @@ import { Provider } from "react-redux";
 import rootReducer from "./reducers";
 import { getAllTours } from "./actions/tour.action";
 import { setMenu } from "./actions/menu.action";
+import { getCity } from "./actions/city.action";
+import { getActivity } from "./actions/activity.action";
+import { getItinerary } from "./actions/itinerary.action";
+import { getPics } from "./actions/pics.action";
 
 // On crée le store Redux
 const store = configureStore({
@@ -24,6 +28,11 @@ const store = configureStore({
 });
 store.dispatch(getAllTours());
 store.dispatch(setMenu(false));
+store.dispatch(getCity());
+store.dispatch(getActivity());
+store.dispatch(getItinerary());
+store.dispatch(getPics());
+
 
 // On utilise la nouvelle API React 18
 const root = ReactDOM.createRoot(document.getElementById("root"));
