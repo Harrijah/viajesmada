@@ -175,7 +175,7 @@ const Tourpage = () => {
                   </div>
                 </div>
               </div>
-              <a href="#">Reservar</a>
+              <a href="#tourform">Reservar</a>
             </div>
           </div>
 

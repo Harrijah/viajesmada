@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { isEmpty } from "../components/Utils";
-useSelector
+useSelector;
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Carousel } from "react-responsive-carousel";
 import { useSelector } from "react-redux";
 
-
-
-
 const Contacto = () => {
-    const mytour = useSelector((state) => state.oneTourReducer);
-    const pics = useSelector((state) => state.picsReducer);
+  const mytour = useSelector((state) => state.oneTourReducer);
+  const pics = useSelector((state) => state.picsReducer);
+  const [nombre, setNombre] = useState('');
+  const [correo, setCorreo] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
+  const [numeropersonas, setNumeropersonas] = useState('');
+  const [mensaje, setMensaje] = useState('');
+  const [formok, setFormok] = useState(false);
+  useEffect(() => {
+    if (nombre.length > 3 && correo.length > 10 && whatsapp.length > 6 && mensaje) {
+      setFormok(true);
+    } else {
+      setFormok(false);
+    }
+  }, [nombre, correo, whatsapp, numeropersonas, mensaje]);
+  
+
 
   return (
     <div>
@@ -22,7 +34,7 @@ const Contacto = () => {
           <div>
             <h1>Contactarnos</h1>
           </div>
-          <p style={{textAlign: "left"}}>
+          <p style={{ textAlign: "left" }}>
             Viajes Mada es un Tour Operador con un enfoque humano, cuyo objetivo
             es organizar para usted un viaje exitoso en la gran isla. Con
             nuestra experiencia, tanto en productos turísticos como en servicios
@@ -30,7 +42,7 @@ const Contacto = () => {
             hacia una única visión: ofrecerle una estancia agradable y memorable
             en el país.
           </p>
-          <p style={{textAlign: "left"}}>
+          <p style={{ textAlign: "left" }}>
             Nuestro equipo está compuesto por profesionales del turismo, desde
             agentes de viaje en la oficina central hasta guías/choferes
             acompañantes que se encargarán de su satisfacción y bienestar
@@ -44,43 +56,73 @@ const Contacto = () => {
         </div>
 
         <div id="insidecontainer" className="">
-            <div className="carousel">
-              <img className="contact" style={{borderRadius: "5px",  margin: "20px auto 30px", boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)"}} src="https://tours.viajes-madagascar.mg/uploads/IMG_20181104_091536.jpg" alt="" />
-            </div>
-          <div id="tourform" style={{marginBottom: "30px"}}>
+          <div className="carousel">
+            <img
+              className="contact"
+              style={{
+                borderRadius: "5px",
+                margin: "20px auto 30px",
+                boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
+              }}
+              src="https://tours.viajes-madagascar.mg/uploads/IMG_20181104_091536.jpg"
+              alt=""
+            />
+          </div>
+          <div id="tourform" style={{ marginBottom: "30px" }}>
             <h2>Pedir información</h2>
             <div className="mytourform">
-      <form action="https://tours.viajes-madagascar.mg/getinfos" method="post">
-            <input
-              type="hidden"
-              name="tourid"
-              value='0'
-            />
-            <input
-                type="hidden"
-                name="abouttour"
-                value='Page de contact'
-            />
-            <label htmlFor="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Ejemplo: Paolo" />
-            <label htmlFor="correo">Correo</label>
-            <input type="email" name="correo" id="correo" placeholder="Ejemplo: paolo@mail.com" />
-            <label htmlFor="whatsapp">Telefono / Whatsapp</label>
-            <input type="text" name="whatsapp" id="whatsapp" placeholder="Ejemplo: +32 0 01 02 03 04" />
-            {/* <label htmlFor="numeropersonas">Número de personas *</label> */}
-            <input type="hidden" name="numeropersonas" id="numeropersonas" value='0' placeholder="Ejemplo: 4" />
-            {/* <label htmlFor="salida">Fecha de salida *</label> */}
-            <input type="hidden" name="salida" value='0' id="salida" />
-            <label htmlFor="mensaje">Mensaje</label>
-            <textarea
-                name="mensaje"
-                id=""
-                cols="30"
-                rows="5"
-                placeholder="Escriba su mensaje aquí."
-            ></textarea>
-            <input type="submit" value="Enviar" />
-        </form>
+              <form
+                action="https://tours.viajes-madagascar.mg/getinfos"
+                method="post"
+              >
+                <input type="hidden" name="tourid" value="0" />
+                <input type="hidden" name="abouttour" value="Page de contact" />
+                <label htmlFor="nombre">Nombre</label>*
+                <input
+                  type="text"
+                  name="nombre"
+                  id="nombre"
+                  placeholder="Ejemplo: Paolo"
+                  onChange={(e) => setNombre(e.target.value)} 
+                />
+                <label htmlFor="correo">Correo</label>*
+                <input
+                  type="email"
+                  name="correo"
+                  id="correo"
+                  placeholder="Ejemplo: paolo@mail.com"
+                  onChange={(e) => setCorreo(e.target.value)}
+                />
+                <label htmlFor="whatsapp">Telefono / Whatsapp</label>*
+                <input
+                  type="text"
+                  name="whatsapp"
+                  id="whatsapp"
+                  placeholder="Ejemplo: +32 0 01 02 03 04"
+                  onChange={(e) => setWhatsapp(e.target.value)} 
+                />
+                {/* <label htmlFor="numeropersonas">Número de personas *</label> */}
+                <input
+                  type="hidden"
+                  name="numeropersonas"
+                  id="numeropersonas"
+                  value="0"
+                  placeholder="Ejemplo: 4"
+                  onChange={(e) => setNumeropersonas(e.target.value)}
+                />*
+                {/* <label htmlFor="salida">Fecha de salida *</label> */}
+                <input type="hidden" name="salida" value="0" id="salida" />
+                <label htmlFor="mensaje">Mensaje</label>*
+                <textarea
+                  name="mensaje"
+                  id=""
+                  cols="30"
+                  rows="5"
+                  placeholder="Escriba su mensaje aquí."
+                  onChange={(e) => setMensaje(e.target.value)} 
+                ></textarea>
+                {(formok) ? <input type="submit" value="Enviar" /> : <span style={{ display:'block', width: '100%', minHeight: '55px', background: '#e6d7b1', color:'grey', textAlign: 'center', paddingTop: '15px', borderRadius: '5px'}}>Por favor, llene los campos con *</span>}
+              </form>
             </div>
           </div>
         </div>

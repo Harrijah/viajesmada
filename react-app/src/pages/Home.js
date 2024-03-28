@@ -91,7 +91,7 @@ const Home = () => {
                       biodiversidad única y disfruta de la hospitalidad local en
                       esta joya del Índico.{" "}
                     </p>
-                    <button onClick={() => goto('norte')}>Descubrir</button>
+                    <button onClick={() => goto('norte/norte')}>Descubrir</button>
                   </div>
                 </div>
               </div>
@@ -109,7 +109,7 @@ const Home = () => {
                       paisajes cársticos, cañones y la rica historia de esta
                       región única.{" "}
                     </p>
-                    <button onClick={() => goto('sur')}>Descubrir</button>
+                    <button onClick={() => goto('sur/sur')}>Descubrir</button>
                   </div>
                 </div>
               </div>
@@ -126,7 +126,7 @@ const Home = () => {
                       singulares. Explora las maravillas naturales y culturales
                       de esta región fascinante del Índico.{" "}
                     </p>
-                    <button onClick={() => goto('este')}>Descubrir</button>
+                    <button onClick={() => goto('este/este')}>Descubrir</button>
                   </div>
                 </div>
               </div>
@@ -143,7 +143,7 @@ const Home = () => {
                       experiencia inolvidable. Descubre los baobabs centenarios
                       y la cultura local en esta fascinante parte de la isla.{" "}
                     </p>
-                    <button onClick={() => goto('oeste')}>Descubrir</button>
+                    <button onClick={() => goto('oeste/oeste')}>Descubrir</button>
                   </div>
                 </div>
               </div>
@@ -162,7 +162,7 @@ const Home = () => {
             </p>
             <div className="thematicsgrid">
               <div className="clasico">
-                <a href="http://localhost:3000/classique/general">
+                <a href="/classique/general">
                   {/* <span> */}
                   <h3>Circuitos clasicos</h3>
                   <p>Descubre nuestras rutas clásicas</p>
@@ -170,7 +170,7 @@ const Home = () => {
                 </a>
               </div>
               <div className="naturaleza">
-                <a href="http://localhost:3000/thematique/nature">
+                <a href="/thematique/nature">
                   {/* <div> */}
                   <h3>Naturaleza e vida sylvestre</h3>
                   <p>
@@ -181,7 +181,7 @@ const Home = () => {
                 </a>
               </div>
               <div className="playas">
-                <a href="http://localhost:3000/thematique/balneaire">
+                <a href="/thematique/balneaire">
                   {/* <div> */}
                     <h3>Balneario</h3>
                     <p>Descubre las playas más hermosas de Madagascar.</p>
@@ -189,7 +189,7 @@ const Home = () => {
                 </a>
               </div>
               <div className="lunademiel">
-                <a href="http://localhost:3000/thematique/balneaire">
+                <a href="/thematique/balneaire">
                   {/* <div> */}
                     <h3>Luna de miel</h3>
                     <p>Haz que tu luna de miel sea la más original de todas.</p>
@@ -197,7 +197,7 @@ const Home = () => {
                 </a>
               </div>
               <div className="aventura">
-                <a href="http://localhost:3000/thematique/aventure">
+                <a href="/thematique/aventure">
                   {/* <div> */}
                     <h3>Aventura</h3>
                     <p>¿Listos para la aventura? Sigan al guía.</p>
@@ -205,7 +205,7 @@ const Home = () => {
                 </a>
               </div>
               <div className="senderismo">
-                <a href="http://localhost:3000/thematique/culturel">
+                <a href="/thematique/culturel">
                   {/* <div> */}
                     <h3>Cultural</h3>
                     <p>

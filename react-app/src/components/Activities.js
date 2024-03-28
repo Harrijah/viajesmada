@@ -85,6 +85,7 @@ const Activities = () => {
     };
   }, [currentSlide]);
 
+  // _activities.scss
   return (
     <div id="activities">
       <div className="activitycontainer">
